@@ -1,19 +1,72 @@
-              total        used        free      shared  buff/cache   available
-Mem:           7842        2203        3508         365        2130        4971
-Swap:          2047           0        2047
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
 
-              total        used        free      shared  buff/cache   available
-Mem:           7842        2225        3468         365        2149        4949
-Swap:          2047           0        2047
+Running the test with following options:
+Number of threads: 1
+Random number generator seed is 0 and will be ignored
 
-              total        used        free      shared  buff/cache   available
-Mem:           7842        2227        3466         362        2148        4949
-Swap:          2047           0        2047
 
-              total        used        free      shared  buff/cache   available
-Mem:           7842        2238        3456         360        2147        4940
-Swap:          2047           0        2047
+Doing memory operations speed test
+Memory block size: 1024K
 
-              total        used        free      shared  buff/cache   available
-Mem:           7842        2260        3433         360        2148        4918
-Swap:          2047           0        2047
+Memory transfer size: 102400M
+
+Memory operations type: write
+Memory scope type: global
+Threads started!
+Done.
+
+Operations performed: 102400 ( 8225.33 ops/sec)
+
+102400.00 MB transferred (8225.33 MB/sec)
+
+
+General statistics:
+    total time:                          12.4493s
+    total number of events:              102400
+    total time taken by event execution: 12.2858
+    response time:
+         min:                                  0.11ms
+         avg:                                  0.12ms
+         max:                                  0.68ms
+         approx.  95 percentile:               0.16ms
+
+Threads fairness:
+    events (avg/stddev):           102400.0000/0.00
+    execution time (avg/stddev):   12.2858/0.00
+
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 1
+Random number generator seed is 0 and will be ignored
+
+
+Doing memory operations speed test
+Memory block size: 1024K
+
+Memory transfer size: 102400M
+
+Memory operations type: write
+Memory scope type: global
+Threads started!
+Done.
+
+Operations performed: 102400 ( 7932.69 ops/sec)
+
+102400.00 MB transferred (7932.69 MB/sec)
+
+
+General statistics:
+    total time:                          12.9085s
+    total number of events:              102400
+    total time taken by event execution: 12.7479
+    response time:
+         min:                                  0.11ms
+         avg:                                  0.12ms
+         max:                                  1.60ms
+         approx.  95 percentile:               0.16ms
+
+Threads fairness:
+    events (avg/stddev):           102400.0000/0.00
+    execution time (avg/stddev):   12.7479/0.00
+

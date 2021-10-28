@@ -1,15 +1,72 @@
-              total        used        free      shared  buff/cache   available
-Mem:           7842        2212        3479         362        2150        4964
-Swap:          2047           0        2047
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
 
-              total        used        free      shared  buff/cache   available
-Mem:           7842        2257        3433         362        2151        4919
-Swap:          2047           0        2047
+Running the test with following options:
+Number of threads: 1
+Random number generator seed is 0 and will be ignored
 
-              total        used        free      shared  buff/cache   available
-Mem:           7842        2235        3455         360        2151        4942
-Swap:          2047           0        2047
 
-              total        used        free      shared  buff/cache   available
-Mem:           7842        2237        3453         360        2151        4941
-Swap:          2047           0        2047
+Doing memory operations speed test
+Memory block size: 1024K
+
+Memory transfer size: 102400M
+
+Memory operations type: write
+Memory scope type: global
+Threads started!
+Done.
+
+Operations performed: 102400 ( 8402.50 ops/sec)
+
+102400.00 MB transferred (8402.50 MB/sec)
+
+
+General statistics:
+    total time:                          12.1868s
+    total number of events:              102400
+    total time taken by event execution: 12.1524
+    response time:
+         min:                                  0.11ms
+         avg:                                  0.12ms
+         max:                                  2.83ms
+         approx.  95 percentile:               0.15ms
+
+Threads fairness:
+    events (avg/stddev):           102400.0000/0.00
+    execution time (avg/stddev):   12.1524/0.00
+
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 1
+Random number generator seed is 0 and will be ignored
+
+
+Doing memory operations speed test
+Memory block size: 1024K
+
+Memory transfer size: 102400M
+
+Memory operations type: write
+Memory scope type: global
+Threads started!
+Done.
+
+Operations performed: 102400 ( 7394.06 ops/sec)
+
+102400.00 MB transferred (7394.06 MB/sec)
+
+
+General statistics:
+    total time:                          13.8490s
+    total number of events:              102400
+    total time taken by event execution: 13.8121
+    response time:
+         min:                                  0.13ms
+         avg:                                  0.13ms
+         max:                                  4.22ms
+         approx.  95 percentile:               0.16ms
+
+Threads fairness:
+    events (avg/stddev):           102400.0000/0.00
+    execution time (avg/stddev):   13.8121/0.00
+
