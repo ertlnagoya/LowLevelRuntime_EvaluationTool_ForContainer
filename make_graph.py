@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import sys
 
-def edit_data_memory(file_name,mem_list,swap_list):
+def edit_data_resource_memory(file_name,mem_list,swap_list):
     file = open(file_name)
     lines = file.readlines()
 
@@ -34,19 +34,19 @@ for i in range(len(sys.argv) - 2):
     low_level_runtime.append(str(sys.argv[i+2]))
 
 
-if(benchmark == "memory"):
+if(benchmark == "resource_memory"):
     fig = plt.figure()
     for i in low_level_runtime:
         mem_list = []
         swap_list = []
-        edit_data_memory(benchmark+"/"+i+".txt",mem_list,swap_list)
+        edit_data_resource_memory(benchmark+"/"+i+".txt",mem_list,swap_list)
         x_line = np.linspace(1,len(mem_list),len(mem_list))
         plt.plot(x_line, [(x + y)/1024 for (x, y) in zip(mem_list, swap_list)],label=i,marker="o")
 
     plt.xlabel("Time(sec)")
     plt.ylabel("Memory(GB)")
     plt.legend()
-    plt.savefig("memory/Memory.png")
+    plt.savefig("resource_memory/Resource_Memory.png")
     plt.show()
 elif(benchmark == "syscall"):
     y_label = "Score"

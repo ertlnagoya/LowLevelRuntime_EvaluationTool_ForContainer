@@ -12,8 +12,8 @@ parent_dir=$(dirname $(dirname $0))
 #メモリ測定のメイン処理
 for ((i = 0; i < ${#low_level_runtime[@]}; i++)) {
     #メモリ量を測定した後、run_roop.shにてコンテナを実行
-    rm -f memory/${low_level_runtime[i]}.txt
-    free -s 1 -m > memory/${low_level_runtime[i]}.txt &
+    rm -f resource_memory/${low_level_runtime[i]}.txt
+    free -s 1 -m > resource_memory/${low_level_runtime[i]}.txt &
     source ${parent_dir}/run_roop.sh ${container_num} ${low_level_runtime[i]} ${container_image}
     #freeコマンドをkill
     ps_result=($(ps -C free))
@@ -23,4 +23,4 @@ for ((i = 0; i < ${#low_level_runtime[@]}; i++)) {
 }
 
 #このあと、pythonでグラフ描画処理
-python3 ${parent_dir}/make_graph.py memory ${low_level_runtime[@]}
+python3 ${parent_dir}/make_graph.py resource_memory ${low_level_runtime[@]}
