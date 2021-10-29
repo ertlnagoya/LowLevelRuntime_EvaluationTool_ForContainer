@@ -15,7 +15,7 @@ def edit_data_resource_memory(file_name,mem_list,swap_list):
                 swap_list.append(float(line[3]))
     file.close()
 
-def edit_data_memory(file_name,total_time_list):
+def edit_data_memory(runtime,file_name,total_time_list):
     file = open(file_name)
     lines = file.readlines()
 
@@ -24,10 +24,11 @@ def edit_data_memory(file_name,total_time_list):
         if(len(line) >= 3):
             if(line[0] == "total" and line[1] == "time:"):
                 total_time_list.append(float(line[2][:-1]))
+    print("\n"+runtime)
     print(total_time_list)
     file.close()
 
-def edit_data_syscall(file_name,score_list):
+def edit_data_syscall(runtime,file_name,score_list):
     file = open(file_name)
     lines = file.readlines()
 
@@ -36,6 +37,7 @@ def edit_data_syscall(file_name,score_list):
         if(len(line) >= 4):
             if(line[3] == "Score"):
                 score_list.append(float(line[6]))
+    print("\n"+runtime)
     print(score_list)
     file.close()
 
@@ -70,8 +72,8 @@ elif(benchmark == "memory" or benchmark == "syscall"):
     all_name = ["Max","Min","Avg"]
     for i in low_level_runtime:
         result_list = []
-        if(benchmark == "memory"): edit_data_memory(benchmark+"/"+i+".txt",result_list)
-        elif(benchmark == "syscall"): edit_data_syscall(benchmark+"/"+i+".txt",result_list)
+        if(benchmark == "memory"): edit_data_memory(i,benchmark+"/"+i+".txt",result_list)
+        elif(benchmark == "syscall"): edit_data_syscall(i,benchmark+"/"+i+".txt",result_list)
         max_list.append(max(result_list))
         min_list.append(min(result_list))
         avg_list.append(sum(result_list) / len(result_list))

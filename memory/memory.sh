@@ -5,7 +5,7 @@ declare -a low_level_runtime=("runsc" "crun")
 #各低レベルランタイムについてコンテナを立ち上げる個数
 container_num=2
 #コンテナイメージの指定
-container_image="paipoi/sysbench2 --test=memory --memory-block-size=1M --memory-total-size=100G --num-threads=1 run"
+container_image="paipoi/sysbench_"$(uname -p)" --test=memory --memory-block-size=1M --memory-total-size=100G --num-threads=1 run"
 
 parent_dir=$(dirname $(dirname $0))
 

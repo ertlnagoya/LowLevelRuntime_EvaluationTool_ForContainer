@@ -1,0 +1,11 @@
+FROM ubuntu:20.04
+RUN apt-get update -y &&\
+apt-get install -y git make automake libtool libmysqlclient-dev libpq-dev &&\
+git clone https://github.com/akopytov/sysbench &&\
+cd sysbench &&\
+git checkout 0.4 &&\
+./autogen.sh &&\
+./configure &&\
+make -j &&\
+make install
+ENTRYPOINT ["sysbench"]
