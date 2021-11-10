@@ -1,0 +1,72 @@
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 1
+Random number generator seed is 0 and will be ignored
+
+
+Extra file open flags: 0
+128 files, 16Mb each
+2Gb total file size
+Block size 16Kb
+Periodic FSYNC enabled, calling fsync() each 100 requests.
+Calling fsync() at the end of test, Enabled.
+Using synchronous I/O mode
+Doing sequential write (creation) test
+Threads started!
+Done.
+
+Operations performed:  0 reads, 131072 writes, 128 Other = 131200 Total
+Read 0b  Written 2Gb  Total transferred 2Gb  (369.74Mb/sec)
+23663.66 Requests/sec executed
+
+General statistics:
+    total time:                          5.5388s
+    total number of events:              131072
+    total time taken by event execution: 5.3506
+    response time:
+         min:                                  0.04ms
+         avg:                                  0.04ms
+         max:                                  0.77ms
+         approx.  95 percentile:               0.06ms
+
+Threads fairness:
+    events (avg/stddev):           131072.0000/0.00
+    execution time (avg/stddev):   5.3506/0.00
+
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 1
+Random number generator seed is 0 and will be ignored
+
+
+Extra file open flags: 0
+128 files, 16Mb each
+2Gb total file size
+Block size 16Kb
+Periodic FSYNC enabled, calling fsync() each 100 requests.
+Calling fsync() at the end of test, Enabled.
+Using synchronous I/O mode
+Doing sequential write (creation) test
+Threads started!
+Done.
+
+Operations performed:  0 reads, 131072 writes, 128 Other = 131200 Total
+Read 0b  Written 2Gb  Total transferred 2Gb  (301.51Mb/sec)
+19296.80 Requests/sec executed
+
+General statistics:
+    total time:                          6.7924s
+    total number of events:              131072
+    total time taken by event execution: 6.5488
+    response time:
+         min:                                  0.04ms
+         avg:                                  0.05ms
+         max:                                  1.26ms
+         approx.  95 percentile:               0.07ms
+
+Threads fairness:
+    events (avg/stddev):           131072.0000/0.00
+    execution time (avg/stddev):   6.5488/0.00
+
