@@ -5,4 +5,4 @@ declare -a low_level_runtime=("crun" "runsc")
 #各低レベルランタイムについてコンテナを立ち上げる個数
 container_num=2
 #コンテナイメージの指定
-container_image="paipoi/sysbench_"$(uname -p)" --test=cpu --cpu-max-prime=20000 --num-threads=1 run"
+container_image="paipoi/sysbench_"$(uname -p)" sysbench --test=cpu --cpu-max-prime=20000 --num-threads=1 run"

@@ -41,6 +41,19 @@ def edit_data_syscall(runtime,file_name,score_list):
     print(score_list)
     file.close()
 
+def edit_data_network(runtime,file_name,bandwidth_list):
+    file = open(file_name)
+    lines = file.readlines()
+
+    for line in lines:
+        line = line.split()
+        if(len(line) == 8):
+            if(line[7] == "MBytes/sec"):
+                bandwidth_list.append(float(line[6]))
+    print("\n"+runtime)
+    print(bandwidth_list)
+    file.close()
+
 #main
 benchmark = str(sys.argv[1])
 low_level_runtime = []
@@ -64,6 +77,7 @@ if(benchmark == "resource_memory"):
     plt.show()
 else:
     if(benchmark == "syscall"): y_label = "Score"
+    elif(benchmark == "network"): y_label = "Bandwidth(MBytes-sec)"
     else: y_label = "Total_Time(sec)"
     max_list = []
     min_list = []
@@ -73,6 +87,7 @@ else:
     for i in low_level_runtime:
         result_list = []
         if(benchmark == "syscall"): edit_data_syscall(i,benchmark+"/"+i+".txt",result_list)
+        elif(benchmark == "network"): edit_data_network(i,benchmark+"/"+i+".txt",result_list)
         else: edit_data_sysbench(i,benchmark+"/"+i+".txt",result_list)
         max_list.append(max(result_list))
         min_list.append(min(result_list))

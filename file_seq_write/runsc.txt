@@ -17,22 +17,22 @@ Threads started!
 Done.
 
 Operations performed:  0 reads, 131072 writes, 128 Other = 131200 Total
-Read 0b  Written 2Gb  Total transferred 2Gb  (369.74Mb/sec)
-23663.66 Requests/sec executed
+Read 0b  Written 2Gb  Total transferred 2Gb  (313.01Mb/sec)
+20032.69 Requests/sec executed
 
 General statistics:
-    total time:                          5.5388s
+    total time:                          6.5429s
     total number of events:              131072
-    total time taken by event execution: 5.3506
+    total time taken by event execution: 6.2482
     response time:
          min:                                  0.04ms
-         avg:                                  0.04ms
-         max:                                  0.77ms
-         approx.  95 percentile:               0.06ms
+         avg:                                  0.05ms
+         max:                                  1.76ms
+         approx.  95 percentile:               0.08ms
 
 Threads fairness:
     events (avg/stddev):           131072.0000/0.00
-    execution time (avg/stddev):   5.3506/0.00
+    execution time (avg/stddev):   6.2482/0.00
 
 sysbench 0.4.12:  multi-threaded system evaluation benchmark
 
@@ -53,20 +53,20 @@ Threads started!
 Done.
 
 Operations performed:  0 reads, 131072 writes, 128 Other = 131200 Total
-Read 0b  Written 2Gb  Total transferred 2Gb  (301.51Mb/sec)
-19296.80 Requests/sec executed
+Read 0b  Written 2Gb  Total transferred 2Gb  (343.97Mb/sec)
+22013.81 Requests/sec executed
 
 General statistics:
-    total time:                          6.7924s
+    total time:                          5.9540s
     total number of events:              131072
-    total time taken by event execution: 6.5488
+    total time taken by event execution: 5.7024
     response time:
          min:                                  0.04ms
-         avg:                                  0.05ms
-         max:                                  1.26ms
-         approx.  95 percentile:               0.07ms
+         avg:                                  0.04ms
+         max:                                  1.31ms
+         approx.  95 percentile:               0.06ms
 
 Threads fairness:
     events (avg/stddev):           131072.0000/0.00
-    execution time (avg/stddev):   6.5488/0.00
+    execution time (avg/stddev):   5.7024/0.00
 
