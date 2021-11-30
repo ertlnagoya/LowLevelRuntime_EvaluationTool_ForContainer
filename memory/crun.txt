@@ -15,24 +15,24 @@ Memory scope type: global
 Threads started!
 Done.
 
-Operations performed: 102400 ( 7817.89 ops/sec)
+Operations performed: 102400 ( 7623.70 ops/sec)
 
-102400.00 MB transferred (7817.89 MB/sec)
+102400.00 MB transferred (7623.70 MB/sec)
 
 
 General statistics:
-    total time:                          13.0982s
+    total time:                          13.4318s
     total number of events:              102400
-    total time taken by event execution: 13.0755
+    total time taken by event execution: 13.4067
     response time:
          min:                                  0.11ms
          avg:                                  0.13ms
-         max:                                  0.54ms
-         approx.  95 percentile:               0.13ms
+         max:                                  0.56ms
+         approx.  95 percentile:               0.15ms
 
 Threads fairness:
     events (avg/stddev):           102400.0000/0.00
-    execution time (avg/stddev):   13.0755/0.00
+    execution time (avg/stddev):   13.4067/0.00
 
 sysbench 0.4.12:  multi-threaded system evaluation benchmark
 
@@ -51,22 +51,22 @@ Memory scope type: global
 Threads started!
 Done.
 
-Operations performed: 102400 ( 7526.68 ops/sec)
+Operations performed: 102400 ( 7956.45 ops/sec)
 
-102400.00 MB transferred (7526.68 MB/sec)
+102400.00 MB transferred (7956.45 MB/sec)
 
 
 General statistics:
-    total time:                          13.6049s
+    total time:                          12.8701s
     total number of events:              102400
-    total time taken by event execution: 13.5815
+    total time taken by event execution: 12.8470
     response time:
-         min:                                  0.13ms
+         min:                                  0.11ms
          avg:                                  0.13ms
-         max:                                  4.56ms
+         max:                                  0.63ms
          approx.  95 percentile:               0.14ms
 
 Threads fairness:
     events (avg/stddev):           102400.0000/0.00
-    execution time (avg/stddev):   13.5815/0.00
+    execution time (avg/stddev):   12.8470/0.00
 

@@ -1,35 +1,11 @@
               total        used        free      shared  buff/cache   available
-Mem:           7842        2273        2884         482        2685        4775
+Mem:           7842        3398        1381         740        3063        3391
 Swap:          2047           0        2047
 
               total        used        free      shared  buff/cache   available
-Mem:           7842        2292        2858         487        2691        4750
+Mem:           7842        3449        1324         745        3069        3335
 Swap:          2047           0        2047
 
               total        used        free      shared  buff/cache   available
-Mem:           7842        2322        2833         482        2686        4725
-Swap:          2047           0        2047
-
-              total        used        free      shared  buff/cache   available
-Mem:           7842        2292        2863         482        2686        4756
-Swap:          2047           0        2047
-
-              total        used        free      shared  buff/cache   available
-Mem:           7842        2293        2862         482        2687        4754
-Swap:          2047           0        2047
-
-              total        used        free      shared  buff/cache   available
-Mem:           7842        2289        2865         482        2687        4758
-Swap:          2047           0        2047
-
-              total        used        free      shared  buff/cache   available
-Mem:           7842        2302        2851         482        2688        4745
-Swap:          2047           0        2047
-
-              total        used        free      shared  buff/cache   available
-Mem:           7842        2299        2854         482        2688        4748
-Swap:          2047           0        2047
-
-              total        used        free      shared  buff/cache   available
-Mem:           7842        2292        2861         482        2689        4756
+Mem:           7842        3445        1329         742        3066        3341
 Swap:          2047           0        2047

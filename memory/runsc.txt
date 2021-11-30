@@ -15,24 +15,24 @@ Memory scope type: global
 Threads started!
 Done.
 
-Operations performed: 102400 ( 7850.53 ops/sec)
+Operations performed: 102400 ( 7869.23 ops/sec)
 
-102400.00 MB transferred (7850.53 MB/sec)
+102400.00 MB transferred (7869.23 MB/sec)
 
 
 General statistics:
-    total time:                          13.0436s
+    total time:                          13.0125s
     total number of events:              102400
-    total time taken by event execution: 12.8967
+    total time taken by event execution: 12.8970
     response time:
          min:                                  0.11ms
          avg:                                  0.13ms
-         max:                                  0.77ms
-         approx.  95 percentile:               0.18ms
+         max:                                  0.83ms
+         approx.  95 percentile:               0.17ms
 
 Threads fairness:
     events (avg/stddev):           102400.0000/0.00
-    execution time (avg/stddev):   12.8967/0.00
+    execution time (avg/stddev):   12.8970/0.00
 
 sysbench 0.4.12:  multi-threaded system evaluation benchmark
 
@@ -51,22 +51,22 @@ Memory scope type: global
 Threads started!
 Done.
 
-Operations performed: 102400 ( 8238.88 ops/sec)
+Operations performed: 102400 ( 7505.44 ops/sec)
 
-102400.00 MB transferred (8238.88 MB/sec)
+102400.00 MB transferred (7505.44 MB/sec)
 
 
 General statistics:
-    total time:                          12.4288s
+    total time:                          13.6434s
     total number of events:              102400
-    total time taken by event execution: 12.2696
+    total time taken by event execution: 13.4635
     response time:
          min:                                  0.11ms
-         avg:                                  0.12ms
-         max:                                  0.86ms
-         approx.  95 percentile:               0.16ms
+         avg:                                  0.13ms
+         max:                                  0.44ms
+         approx.  95 percentile:               0.18ms
 
 Threads fairness:
     events (avg/stddev):           102400.0000/0.00
-    execution time (avg/stddev):   12.2696/0.00
+    execution time (avg/stddev):   13.4635/0.00
 
