@@ -1,20 +1,24 @@
+from os import remove
 import matplotlib.pyplot as plt
 import numpy as np
 import sys
 
-#ここを修正する
-def edit_data_lifecycle(file_name,real_list,user_list,sys_list):
+
+def edit_data_lifecycle(file_name,create_list,start_list,stop_list,remove_list):
     file = open(file_name)
     lines = file.readlines()
-    for line in lines:
-        line = line.split()
+    for i in range(0,len(lines)):
+        line = lines[i].split()
         if(len(line) != 0):
             if(line[0] == "real"):
-                real_list.append(float(line[1]))
-            elif(line[0] == "user"):
-                user_list.append(float(line[1]))
-            elif(line[0] == "sys"):
-                sys_list.append(float(line[1]))
+                if(lines[i-1].split()[0] == "create"):
+                    create_list.append(float(line[1]))
+                elif(lines[i-1].split()[0] == "start"):
+                    start_list.append(float(line[1]))
+                elif(lines[i-1].split()[0] == "stop"):
+                    stop_list.append(float(line[1]))
+                elif(lines[i-1].split()[0] == "remove"):
+                    remove_list.append(float(line[1]))
     file.close()
 
 def edit_data_resource_memory(file_name,mem_list,swap_list):
@@ -77,32 +81,42 @@ for i in range(len(sys.argv) - 3):
     low_level_runtime.append(str(sys.argv[i+3]))
 
 if(benchmark == "lifecycle"):
-    time_val = ["Real_Time","User_Time","Sys_Time"]
-    operation = ["Create","Start","Stop","Remove"]
-    for h in range(len(time_val)):
+    max_list = []
+    min_list = []
+    avg_list = []
+    all_list = [max_list,min_list,avg_list]
+    all_name = ["Max","Min","Avg"]
+    ope_name = ["Create","Start","Stop","Remove"]
+    for i in low_level_runtime:
+        create_list = []
+        start_list = []
+        stop_list = []
+        remove_list = []
+        ope_list = [create_list,start_list,stop_list,remove_list]
+        edit_data_lifecycle(benchmark+"/"+i+".txt",create_list,start_list,stop_list,remove_list)
+        #このforで、max_listなどには各ランタイムの各操作ごとの最大値などが入る
+        for result_list in ope_list:
+            max_list.append(max(result_list))
+            min_list.append(min(result_list))
+            avg_list.append(round(sum(result_list) / len(result_list),2))
+    for j in range(len(all_list)):
         fig = plt.figure()
         ax1 = fig.add_subplot(2, 2, 1)
         ax2 = fig.add_subplot(2, 2, 2)
         ax3 = fig.add_subplot(2, 2, 3)
         ax4 = fig.add_subplot(2, 2, 4)
         graph_list = [ax1,ax2,ax3,ax4]
-        real_list = []
-        user_list = []
-        sys_list = []
-        for i in range(0,len(low_level_runtime)):
-            edit_data_lifecycle(benchmark+"/"+low_level_runtime[i]+".txt",real_list,user_list,sys_list)
-        all_list = [real_list,user_list,sys_list]
-        x_line = np.linspace(1,len(low_level_runtime),len(low_level_runtime))
-        for j in range(0,4):
-            for i in range(0,len(low_level_runtime)):
-                graph_list[j].bar(x_line[i], all_list[h][j+4*i],label=low_level_runtime[i])
-                graph_list[j].text(x_line[i],all_list[h][j+4*i],all_list[h][j+4*i] ,ha='center', va='bottom')
-            graph_list[j].set_xlabel(operation[j] + " (" + str(container_num) + "containers)")
-            graph_list[j].set_ylabel("Time(sec)")
-            graph_list[j].tick_params(labelbottom=False,bottom=False)
+        for h in range(len(ope_name)):
+            x_line = np.linspace(1,len(low_level_runtime),len(low_level_runtime))
+            for k in range(0,len(low_level_runtime)):   
+                graph_list[h].bar(x_line[k], all_list[j][h+4*k],label=low_level_runtime[k])
+                graph_list[h].text(x_line[k],all_list[j][h+4*k],all_list[j][h+4*k] ,ha='center', va='bottom')
+            graph_list[h].set_xlabel(ope_name[h])
+            graph_list[h].set_ylabel("Time(sec)")
+            graph_list[h].tick_params(labelbottom=False,bottom=False)
         fig.legend(labels=low_level_runtime,loc='upper center',ncol=4)
-        plt.subplots_adjust(wspace=0.4,hspace=0.3)
-        plt.savefig("lifecycle/"+time_val[h]+".png")
+        plt.subplots_adjust(wspace=0.4,hspace=0.4)
+        plt.savefig("lifecycle/"+all_name[j]+".png")
         plt.show()
 elif(benchmark == "resource_memory"):
     total_memory = []

@@ -5,50 +5,24 @@ rm -f "$1"/err_war.txt
 for ((i = 0; i < ${#low_level_runtime[@]}; i++)) {
     rm -f "$1"/${low_level_runtime[i]}.txt
     if [ "$1" = "lifecycle" ]; then
-        #コンテナの作成
-        echo "create" >> lifecycle/${low_level_runtime[i]}.txt
-        {
-            time -p {
-                for ((j = 0; j < ${container_num}; j++)) {
-                    docker create -t --runtime=${low_level_runtime[i]} --name=${low_level_runtime[i]}$j ${container_image} > /dev/null
-                }
-            }
-        } &>> lifecycle/${low_level_runtime[i]}.txt
-        wait $!
-        sleep 3
-        #コンテナの起動
-        echo "start" >> lifecycle/${low_level_runtime[i]}.txt
-        {
-            time -p {
-                for ((j = 0; j < ${container_num}; j++)) {
-                    docker start ${low_level_runtime[i]}$j > /dev/null
-                }
-            }
-        } &>> lifecycle/${low_level_runtime[i]}.txt
-        wait $!
-        sleep 3
-        #コンテナの停止
-        echo "stop" >> lifecycle/${low_level_runtime[i]}.txt
-        {
-            time -p {
-                for ((j = 0; j < ${container_num}; j++)) {
-                    docker stop ${low_level_runtime[i]}$j > /dev/null
-                }
-            }
-        } &>> lifecycle/${low_level_runtime[i]}.txt
-        wait $!
-        sleep 3
-        #コンテナの削除
-        echo "rm" >> lifecycle/${low_level_runtime[i]}.txt
-        {
-            time -p {
-                for ((j = 0; j < ${container_num}; j++)) {
-                    docker rm ${low_level_runtime[i]}$j > /dev/null
-                }
-            }
-        } &>> lifecycle/${low_level_runtime[i]}.txt
-        wait $!
-        sleep 3
+        #コンテナの1連のライフサイクルをfor文で繰り返す
+        for ((j = 0; j < ${container_num}; j++)) {
+            echo $(($j+1))"cycle" >> lifecycle/${low_level_runtime[i]}.txt
+            echo "create" >> lifecycle/${low_level_runtime[i]}.txt
+            time -p (docker create -t --runtime=${low_level_runtime[i]} --name=${low_level_runtime[i]}$j ${container_image} > /dev/null) &>> lifecycle/${low_level_runtime[i]}.txt
+            wait $!
+            echo "start" >> lifecycle/${low_level_runtime[i]}.txt
+            time -p (docker start ${low_level_runtime[i]}$j > /dev/null) &>> lifecycle/${low_level_runtime[i]}.txt
+            wait $!
+            echo "stop" >> lifecycle/${low_level_runtime[i]}.txt
+            time -p (docker stop ${low_level_runtime[i]}$j > /dev/null) &>> lifecycle/${low_level_runtime[i]}.txt
+            wait $!
+            echo "remove" >> lifecycle/${low_level_runtime[i]}.txt
+            time -p (docker rm ${low_level_runtime[i]}$j > /dev/null) &>> lifecycle/${low_level_runtime[i]}.txt
+            wait $!
+            echo "" >> lifecycle/${low_level_runtime[i]}.txt
+            sleep 3
+        }
     elif [ "$1" = "resource_memory" ]; then
         free -s 1 -m > resource_memory/${low_level_runtime[i]}.txt &
         #コンテナの起動
