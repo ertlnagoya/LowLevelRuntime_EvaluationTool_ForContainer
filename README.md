@@ -1,59 +1,56 @@
 # Container_Eval_Tool_M1
  
-分かりやすくてカッコイイ名前をつける（今回は"hoge"という名前をつける）
+こちらはコンテナ作成時に使用する低レベルランタイムの評価ツールです。
  
-"hoge"が何かを簡潔に紹介する
- 
-# DEMO
- 
-"hoge"の魅力が直感的に伝えわるデモ動画や図解を載せる
+自動でベンチマークの実行、グラフとログの作成を行ってくれます。
  
 # Features
  
-"hoge"のセールスポイントや差別化などを説明する
+合計12種類のベンチマークを用意しました。
+
+* コンテナ内部の処理性能
+* cpu
+	* memory
+	* file_rnd_read
+	* file_seq_read
+	* file_rnd_write
+	* file_seq_write
+	* syscall
+	* network
+* コンテナがホストで使用するリソース
+	* lifecycle
+	* resource_cpu
+	* resource_memory
+	* resource_storage
+
  
 # Requirement
  
-"hoge"を動かすのに必要なライブラリなどを列挙する
- 
-* huga 3.5.2
-* hogehuga 1.0.2
+まとめ中です
  
 # Installation
  
-Requirementで列挙したライブラリなどのインストール方法を説明する
- 
-```bash
-pip install huga_package
-```
+Docker
+sysstat
  
 # Usage
  
-DEMOの実行方法など、"hoge"の基本的な使い方を説明する
+cpuベンチマークを実行するコマンド
  
 ```bash
-git clone https://github.com/hoge/~
-cd examples
-python demo.py
+source start_bench.sh cpu
 ```
  
 # Note
  
-注意点などがあれば書く
+dockerfileディレクトリは使用したコンテナイメージのDockerfileを用意しています。
  
 # Author
  
-作成情報を列挙する
- 
-* 作成者
+* Name
+	* 西村 惇
 * 所属
+	* 名古屋大学大学院　情報学研究科　高田研究室　
 * E-mail
- 
-# License
-ライセンスを明示する
- 
-"hoge" is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
- 
-社内向けなら社外秘であることを明示してる
- 
-"hoge" is Confidential.
+	* atsushi_n@ertl.jp
+
