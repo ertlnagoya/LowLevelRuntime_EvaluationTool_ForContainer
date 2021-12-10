@@ -3,6 +3,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import sys
 
+from numpy.lib.twodim_base import mask_indices
+
 
 def edit_data_lifecycle(file_name,create_list,start_list,stop_list,remove_list):
     file = open(file_name)
@@ -21,7 +23,28 @@ def edit_data_lifecycle(file_name,create_list,start_list,stop_list,remove_list):
                     remove_list.append(float(line[1]))
     file.close()
 
-def edit_data_resource_memory(file_name,mem_list,swap_list):
+def edit_data_resource_storage(file_name,storage_list):
+    file = open(file_name)
+    lines = file.readlines()
+    for line in lines:
+        line = line.split()
+        if(len(line) != 0):
+            if(line[5] == "/"):
+                storage_list.append(int(line[2]))
+    file.close()
+
+def edit_data_resource_cpu(file_name,idle_list):
+    file = open(file_name)
+    lines = file.readlines()
+
+    for line in lines:
+        line = line.split()
+        if(len(line) != 0):
+            if(line[1] == "all"):
+                idle_list.append(float(line[11]))
+    file.close()
+
+def edit_data_resource_memory(file_name,mem_list):
     file = open(file_name)
     lines = file.readlines()
 
@@ -30,8 +53,6 @@ def edit_data_resource_memory(file_name,mem_list,swap_list):
         if(len(line) != 0):
             if(line[0] == "Mem:"):
                 mem_list.append(float(line[3]))
-            elif(line[0] == "Swap:"):
-                swap_list.append(float(line[3]))
     file.close()
 
 def edit_data_sysbench(runtime,file_name,total_time_list):
@@ -118,32 +139,51 @@ if(benchmark == "lifecycle"):
         plt.subplots_adjust(wspace=0.4,hspace=0.4)
         plt.savefig("lifecycle/"+all_name[j]+".png")
         plt.show()
-elif(benchmark == "resource_memory"):
-    total_memory = []
+elif(benchmark == "resource_storage"):
     fig = plt.figure()
-    for i in low_level_runtime:
-        mem_list = []
-        swap_list = []
-        edit_data_resource_memory(benchmark+"/"+i+".txt",mem_list,swap_list)
-        total_memory.append((max(mem_list) + max(swap_list)) - (min(mem_list) + min(swap_list)))
-        x_line = np.linspace(1,len(mem_list),len(mem_list))
-        plt.plot(x_line, [(x + y) for (x, y) in zip(mem_list, swap_list)],label=i,marker="o")
-    plt.ylim(0,max(mem_list) + max(swap_list) + 500)
-    plt.xlabel("Time(sec)")
-    plt.ylabel("Memory(MB)")
-    plt.legend()
-    plt.savefig("resource_memory/Resource_Memory.png")
-    plt.show()
-    #ここから各コンテナのメモリ使用量
-    fig = plt.figure()
+    x_line = np.linspace(1,len(low_level_runtime),len(low_level_runtime))
     for i in range(len(low_level_runtime)):
-        plt.bar(x_line[i], total_memory[i],label=low_level_runtime[i])
-        plt.text(x_line[i], total_memory[i],total_memory[i], ha='center', va='bottom')
+        storage_list = []
+        edit_data_resource_storage(benchmark+"/"+low_level_runtime[i]+".txt",storage_list)
+        plt.bar(x_line[i],storage_list[1] - storage_list[0],label=low_level_runtime[i])
+        plt.text(x_line[i], storage_list[1]-storage_list[0],storage_list[1]-storage_list[0], ha='center', va='bottom')
     plt.tick_params(labelbottom=False,bottom=False)
     plt.xlabel("Runtime")
-    plt.ylabel("Memory Usage(MB) : " +str(container_num) + " containers")
+    plt.ylabel("Storage Usage(MB) : " +str(container_num) + " containers")
     plt.legend()
-    plt.savefig(benchmark+"/"+"Memory_Usage.png")
+    plt.savefig(benchmark+"/"+"Storage_Usage.png")
+    plt.show()
+elif(benchmark == "resource_cpu" or benchmark == "resource_memory"):
+    #1秒ごとのリソース使用量の推移
+    fig = plt.figure()
+    total_list = []
+    if(benchmark == "resource_cpu"): y_label = "Transition_CPU_Usage_Rate(%)"
+    elif(benchmark == "resource_memory"): y_label = "Transition_Free_Memory(MB)"
+    for i in low_level_runtime:
+        result_list = []
+        if(benchmark == "resource_cpu"): edit_data_resource_cpu(benchmark+"/"+i+".txt",result_list)
+        elif(benchmark == "resource_memory"): edit_data_resource_memory(benchmark+"/"+i+".txt",result_list)
+        total_list.append(max(result_list) - min(result_list))
+        x_line = np.linspace(1,len(result_list),len(result_list))
+        plt.plot(x_line, result_list ,label=i,marker="o")
+    plt.ylim(0,)
+    plt.xlabel("Time(sec)")
+    plt.ylabel(y_label)
+    plt.legend()
+    plt.savefig(benchmark+"/"+y_label+".png")
+    plt.show()
+    #コンテナ作成前後でのリソース使用量の差
+    fig = plt.figure()
+    if(benchmark == "resource_cpu"): y_label = "Diff_CPU_Usage_Rate(%)"
+    elif(benchmark == "resource_memory"): y_label = "Diff_Memory_Usage(MB)"
+    for i in range(len(low_level_runtime)):
+        plt.bar(x_line[i], total_list[i],label=low_level_runtime[i])
+        plt.text(x_line[i], total_list[i],total_list[i], ha='center', va='bottom')
+    plt.tick_params(labelbottom=False,bottom=False)
+    plt.xlabel("Runtime")
+    plt.ylabel(y_label + " : " +str(container_num) + " containers")
+    plt.legend()
+    plt.savefig(benchmark+"/"+y_label+".png")
     plt.show()
 else:
     if(benchmark == "syscall"): y_label = "Score"
@@ -163,7 +203,6 @@ else:
         min_list.append(min(result_list))
         avg_list.append(sum(result_list) / len(result_list))
     x_line = np.linspace(1,len(low_level_runtime),len(low_level_runtime))
-
     for n in range(len(all_list)):
         fig = plt.figure()
         for i in range(len(low_level_runtime)):
@@ -175,4 +214,3 @@ else:
         plt.legend()
         plt.savefig(benchmark+"/"+all_name[n]+"_"+y_label+".png")
         plt.show()
-    

@@ -15,7 +15,7 @@ for ((i = 0; i < ${#low_level_runtime[@]}; i++)) {
             time -p (docker start ${low_level_runtime[i]}$j > /dev/null) &>> lifecycle/${low_level_runtime[i]}.txt
             wait $!
             echo "stop" >> lifecycle/${low_level_runtime[i]}.txt
-            time -p (docker stop ${low_level_runtime[i]}$j > /dev/null) &>> lifecycle/${low_level_runtime[i]}.txt
+            time -p (docker stop --time=10 ${low_level_runtime[i]}$j > /dev/null) &>> lifecycle/${low_level_runtime[i]}.txt
             wait $!
             echo "remove" >> lifecycle/${low_level_runtime[i]}.txt
             time -p (docker rm ${low_level_runtime[i]}$j > /dev/null) &>> lifecycle/${low_level_runtime[i]}.txt
@@ -23,14 +23,30 @@ for ((i = 0; i < ${#low_level_runtime[@]}; i++)) {
             echo "" >> lifecycle/${low_level_runtime[i]}.txt
             sleep 3
         }
-    elif [ "$1" = "resource_memory" ]; then
-        free -s 1 -m > resource_memory/${low_level_runtime[i]}.txt &
+    elif [ "$1" = "resource_storage" ]; then
+        df -m / >> "$1"/${low_level_runtime[i]}.txt 2>> "$1"/err_war.txt
+        for ((j = 0; j < ${container_num}; j++)) {
+            docker run -td --runtime=${low_level_runtime[i]} --name=${low_level_runtime[i]}$j ${container_image} > /dev/null
+        }
+        sleep 3
+        df -m / >> "$1"/${low_level_runtime[i]}.txt 2>> "$1"/err_war.txt
+        for ((j = 0; j < ${container_num}; j++)) {
+            docker stop ${low_level_runtime[i]}$j > /dev/null && docker rm ${low_level_runtime[i]}$j > /dev/null
+        }
+        wait $!
+    elif [ "$1" = "resource_cpu" ] || [ "$1" = "resource_memory" ]; then
+        #測定コマンドを指定
+        if [ "$1" = "resource_cpu" ]; then mpstat 1 > resource_cpu/${low_level_runtime[i]}.txt &
+        elif [ "$1" = "resource_memory" ]; then free -s 1 -m > resource_memory/${low_level_runtime[i]}.txt &
+        fi
         #コンテナの起動
         for ((j = 0; j < ${container_num}; j++)) {
             docker run -td --runtime=${low_level_runtime[i]} --name=${low_level_runtime[i]}$j ${container_image} > /dev/null
         }
-        #freeコマンドをkill
-        ps_result=($(ps -C free))
+        #測定コマンドをkill
+        if [ "$1" = "resource_cpu" ]; then ps_result=($(ps -C mpstat))
+        elif [ "$1" = "resource_memory" ]; then ps_result=($(ps -C free))
+        fi
         ps_id=${ps_result[4]}
         kill ${ps_id}
         #コンテナの削除
@@ -38,6 +54,7 @@ for ((i = 0; i < ${#low_level_runtime[@]}; i++)) {
             docker stop ${low_level_runtime[i]}$j > /dev/null
             docker rm ${low_level_runtime[i]}$j > /dev/null
         }
+        wait $!
         sleep 3
     elif [ "$1" = "file_rnd_read" ] ||  [ "$1" = "file_seq_read" ]; then
         for ((j = 0; j < ${container_num}; j++)) {
@@ -47,9 +64,11 @@ for ((i = 0; i < ${#low_level_runtime[@]}; i++)) {
         }
     elif [ "$1" = "network" ]; then
         docker run -d --runtime=${low_level_runtime[i]} --name=${low_level_runtime[i]} --ip=172.17.0.2 paipoi/iperf_"$(uname -p)" -s > /dev/null
-        sleep 5 #runscは起動が遅いようなのでsleepを間に挟む
+        wait $!
+        sleep 3
         for ((j = 0; j < ${container_num}; j++)) {
             iperf -f M -c 172.17.0.2 >> "$1"/${low_level_runtime[i]}.txt 2>> "$1"/err_war.txt
+            wait $!
             sleep 3         
         }
         docker stop ${low_level_runtime[i]} > /dev/null && docker rm ${low_level_runtime[i]} > /dev/null
