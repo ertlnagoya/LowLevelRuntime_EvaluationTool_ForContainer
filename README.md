@@ -1,15 +1,16 @@
 # Container_Eval_Tool_M1
  
-こちらはコンテナ作成時に使用する低レベルランタイムの評価ツールです。
- 
+こちらはコンテナ作成時に使用する低レベルランタイムの評価ツールです。   
 自動でベンチマークの実行、グラフとログの作成を行ってくれます。
- 
+<br>
+<br>
+
 # Features
  
 合計12種類のベンチマークを用意しました。
 
 ### コンテナ内部の処理性能
-* cpu
+* cpu  
 * memory
 * file_rnd_read
 * file_seq_read
@@ -22,8 +23,8 @@
 * resource_cpu
 * resource_memory
 * resource_storage
+<br>
 
- 
 # Requirement
  
 以下の全てのコマンドが使用できることを確認してください
@@ -54,7 +55,9 @@ sudo apt install -y python3-pip
 pip3 install numpy
 pip3 install matplotlib
 ```
- 
+<br>
+<br>
+
 # Installation
 
 githubからこのリポジトリをクローンする  
@@ -95,20 +98,32 @@ sudo vi /etc/docker/daemon.json
     },
 }
 ```
- 
+<br>
+<br>
+
 # Usage
- 
-cpuベンチマークを実行するコマンド
+
+### cpuベンチマークを実行する場合  
+cpuディレクトリのcpu.shに、評価対象とする低レベルランタイム(今回はcrun、runsc)を記入する
+```bash
+declare -a low_level_runtime=("crun" "runsc")
+```
+<br>
+引数としてcpu項目を指定し、start_bench.shを実行する
+
 ```bash
 source start_bench.sh cpu
 ```
- 
+<br>
+<br>
+
 # Note
  
-* dockerfileディレクトリは使用したコンテナイメージのDockerfileをまとめています。
-
+* dockerfileディレクトリは使用したコンテナイメージのDockerfileをまとめています。  
 * tmpディレクトリはツールの作成時に実験的に作成したファイルをまとめています。
- 
+<br>
+<br>
+
 # Author
  
 * Name
