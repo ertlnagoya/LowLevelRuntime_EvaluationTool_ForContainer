@@ -9,7 +9,8 @@
 合計12種類のベンチマークを用意しました。
 
 ### コンテナ内部の処理性能
-* cpu
+* cpu  
+コンテナ内部でsysbenchのcpuオプションを実行する
 * memory
 * file_rnd_read
 * file_seq_read
