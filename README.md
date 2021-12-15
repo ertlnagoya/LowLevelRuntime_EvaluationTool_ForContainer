@@ -57,12 +57,11 @@ pip3 install matplotlib
  
 # Installation
 
-### githubからこのリポジトリをクローンする  
+githubからこのリポジトリをクローンする  
 ```bash
 git clone https://github.com/ertlnagoya/Container_Eval_Tool_M1/
 ```
 <br>
-### 低レベルランタイムのインストール
 必要に応じて低レベルランタイムをインストールする  
 
 その後、/etc/docker/daemon.jsonに低ベレルランタイムのリンク先を記入  
