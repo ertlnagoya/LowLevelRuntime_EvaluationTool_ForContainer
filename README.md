@@ -23,7 +23,6 @@
 * resource_cpu
 * resource_memory
 * resource_storage
-
 <br>
 <br>
 
