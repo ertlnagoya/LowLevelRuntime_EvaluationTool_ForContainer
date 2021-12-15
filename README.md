@@ -32,7 +32,7 @@
 
 以下の全てのコマンドが使用できることを確認してください
 
-* docker  
+docker  
 [リンク先](https://matsuand.github.io/docs.docker.jp.onthefly/engine/install/ubuntu/)を参考にDockerをインストール  
 インストール後に、sudo権限なしでdockerコマンドを実行できるように変更  
 ```bash
@@ -41,17 +41,17 @@ sudo usermod -aG docker ユーザ名
 sudo reboot
 ```
 
-* sysstat  
+sysstat  
 ```bash
 sudo apt install -y sysstat
 ```
 
-* free  
+free  
 ```bash
 sudo apt install -y procps
 ```
 
-* python3 (ライブラリ含む)  
+python3 (ライブラリ含む)  
 ```bash
 sudo apt install -y python3
 sudo apt install -y python3-pip
