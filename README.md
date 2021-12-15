@@ -29,10 +29,35 @@
 まとめ中です
  
 # Installation
- 
-Docker
+
+以下の全てのコマンドが使用できることを確認してください
+
+docker
+https://matsuand.github.io/docs.docker.jp.onthefly/engine/install/ubuntu/
+インストール後に、sudo権限なしでdockerコマンドを実行できるように変更
+```bash
+sudo groupadd docker
+sudo usermod -aG docker ユーザ名
+sudo reboot
+```
 
 sysstat
+```bash
+sudo apt install -y sysstat
+```
+
+free
+```bash
+sudo apt install -y procps
+```
+
+python3 (ライブラリ含む)
+```bash
+sudo apt install -y python3
+sudo apt install -y python3-pip
+pip3 install numpy
+pip3 install matplotlib
+```
  
 # Usage
  
