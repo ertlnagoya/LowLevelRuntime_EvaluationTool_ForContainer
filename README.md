@@ -28,7 +28,7 @@
  
 以下の全てのコマンドが使用できることを確認してください
 
-#### docker
+#### docker  
 [リンク先](https://matsuand.github.io/docs.docker.jp.onthefly/engine/install/ubuntu/)を参考にDockerをインストール  
 インストール後に、sudo権限なしでdockerコマンドを実行できるように変更  
 ```bash
@@ -36,17 +36,17 @@ sudo groupadd docker
 sudo usermod -aG docker ユーザ名
 sudo reboot
 ```
-<br />
+
 #### sysstat  
 ```bash
 sudo apt install -y sysstat
 ```
-<br />
+
 #### free  
 ```bash
 sudo apt install -y procps
 ```
-<br />
+
 #### python3 (ライブラリ含む)  
 ```bash
 sudo apt install -y python3
@@ -57,14 +57,14 @@ pip3 install matplotlib
  
 # Installation
 
-githubからリポジトリをクローンする
+githubからリポジトリをクローンする  
 ```bash
 git clone https://github.com/ertlnagoya/Container_Eval_Tool_M1/
 ```
-<br />
+
 必要に応じて低レベルランタイムをインストールする  
 その後、/etc/docker/daemon.jsonに低ベレルランタイムのリンク先を記入
-<br />
+
 #### [crun](https://github.com/containers/crun)の場合
 ```bash
 #依存ツールをインストール
@@ -83,7 +83,7 @@ sudo make install
 #dockerでcrunを使用できるように書き込み
 sudo vi /etc/docker/daemon.json
 ```
-<br />
+  
 /etc/docker/daemon.jsonの中身
 ```bash
 {
