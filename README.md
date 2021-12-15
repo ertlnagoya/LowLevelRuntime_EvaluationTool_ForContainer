@@ -9,7 +9,7 @@
 合計12種類のベンチマークを用意しました。
 
 * コンテナ内部の処理性能
-* cpu
+	* cpu
 	* memory
 	* file_rnd_read
 	* file_seq_read
@@ -61,7 +61,7 @@ githubからリポジトリをクローンする
 ```bash
 git clone https://github.com/ertlnagoya/Container_Eval_Tool_M1/
 ```
-
+<br>
 必要に応じて低レベルランタイムをインストールする  
 その後、/etc/docker/daemon.jsonに低ベレルランタイムのリンク先を記入
 
