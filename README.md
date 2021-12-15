@@ -97,8 +97,14 @@ sudo vi /etc/docker/daemon.json
 ```
  
 # Usage
- 
-cpuベンチマークを実行するコマンド
+
+### cpuベンチマークを実行する場合  
+cpuディレクトリのcpu.shに、評価対象とする低レベルランタイム(今回はcrun、runsc)を記入する
+```bash
+declare -a low_level_runtime=("crun" "runsc")
+```
+<br>
+引数としてcpu項目を指定し、start_bench.shを実行する
 ```bash
 source start_bench.sh cpu
 ```
