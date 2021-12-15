@@ -63,7 +63,7 @@ git clone https://github.com/ertlnagoya/Container_Eval_Tool_M1/
 ```
 <br>
 必要に応じて低レベルランタイムをインストールする  
-その後、/etc/docker/daemon.jsonに低ベレルランタイムのリンク先を記入
+その後、/etc/docker/daemon.jsonに低ベレルランタイムのリンク先を記入  
 
 #### [crun](https://github.com/containers/crun)の場合
 ```bash
