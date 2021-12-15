@@ -36,17 +36,17 @@ sudo groupadd docker
 sudo usermod -aG docker ユーザ名
 sudo reboot
 ```
-<br> 
+<br />
 #### sysstat  
 ```bash
 sudo apt install -y sysstat
 ```
-<br>
+<br />
 #### free  
 ```bash
 sudo apt install -y procps
 ```
-<br>
+<br />
 #### python3 (ライブラリ含む)  
 ```bash
 sudo apt install -y python3
@@ -61,10 +61,10 @@ githubからリポジトリをクローンする
 ```bash
 git clone https://github.com/ertlnagoya/Container_Eval_Tool_M1/
 ```
-<br>
+<br />
 必要に応じて低レベルランタイムをインストールする  
 その後、/etc/docker/daemon.jsonに低ベレルランタイムのリンク先を記入
-<br>
+<br />
 #### [crun](https://github.com/containers/crun)の場合
 ```bash
 #依存ツールをインストール
@@ -83,7 +83,7 @@ sudo make install
 #dockerでcrunを使用できるように書き込み
 sudo vi /etc/docker/daemon.json
 ```
-<br>
+<br />
 /etc/docker/daemon.jsonの中身
 ```bash
 {
