@@ -33,7 +33,7 @@
 以下の全てのコマンドが使用できることを確認してください
 
 * docker  
-https://matsuand.github.io/docs.docker.jp.onthefly/engine/install/ubuntu/  
+[リンク先](https://matsuand.github.io/docs.docker.jp.onthefly/engine/install/ubuntu/)を参考にDockerをインストール  
 インストール後に、sudo権限なしでdockerコマンドを実行できるように変更  
 ```bash
 sudo groupadd docker
