@@ -14,18 +14,18 @@ Done.
 
 
 General statistics:
-    total time:                          28.6401s
+    total time:                          29.4269s
     total number of events:              10000
-    total time taken by event execution: 28.6221
+    total time taken by event execution: 29.4054
     response time:
          min:                                  2.39ms
-         avg:                                  2.86ms
-         max:                                  4.70ms
-         approx.  95 percentile:               3.08ms
+         avg:                                  2.94ms
+         max:                                 11.16ms
+         approx.  95 percentile:               3.86ms
 
 Threads fairness:
     events (avg/stddev):           10000.0000/0.00
-    execution time (avg/stddev):   28.6221/0.00
+    execution time (avg/stddev):   29.4054/0.00
 
 sysbench 0.4.12:  multi-threaded system evaluation benchmark
 
@@ -43,16 +43,16 @@ Done.
 
 
 General statistics:
-    total time:                          28.4689s
+    total time:                          28.9563s
     total number of events:              10000
-    total time taken by event execution: 28.4529
+    total time taken by event execution: 28.9348
     response time:
          min:                                  2.39ms
-         avg:                                  2.85ms
-         max:                                  6.94ms
-         approx.  95 percentile:               3.08ms
+         avg:                                  2.89ms
+         max:                                  7.60ms
+         approx.  95 percentile:               3.62ms
 
 Threads fairness:
     events (avg/stddev):           10000.0000/0.00
-    execution time (avg/stddev):   28.4529/0.00
+    execution time (avg/stddev):   28.9348/0.00
 
