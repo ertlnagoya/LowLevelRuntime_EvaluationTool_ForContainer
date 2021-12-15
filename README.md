@@ -26,10 +26,6 @@
  
 # Requirement
  
-まとめ中です
- 
-# Installation
-
 以下の全てのコマンドが使用できることを確認してください
 
 #### docker
@@ -59,6 +55,42 @@ sudo apt install -y python3
 sudo apt install -y python3-pip
 pip3 install numpy
 pip3 install matplotlib
+```
+ 
+# Installation
+
+githubからリポジトリをクローンする
+```bash
+git clone https://github.com/ertlnagoya/Container_Eval_Tool_M1/
+```
+
+必要に応じて低レベルランタイムをインストールする  
+その後、/etc/docker/daemon.jsonに低ベレルランタイムのリンク先を記入  
+#### [crun](https://github.com/containers/crun)の場合
+```bash
+sudo apt-get install -y make git gcc build-essential pkgconf libtool \
+   libsystemd-dev libprotobuf-c-dev libcap-dev libseccomp-dev libyajl-dev \
+   go-md2man libtool autoconf python3 automake
+git clone https://github.com/containers/crun
+
+#crunのディレクトリに移動
+./autogen.sh
+./configure
+make
+sudo make install
+
+#/etc/docker/daemon.jsonに書き込み
+sudo vi /etc/docker/daemon.json
+```
+/etc/docker/daemon.jsonの中身
+```bash
+{
+    "runtimes": {
+        "crun": {
+            "path": "/usr/local/bin/crun"
+        },
+    },
+}
 ```
  
 # Usage
