@@ -8,27 +8,27 @@
  
 合計12種類のベンチマークを用意しました。
 
-* コンテナ内部の処理性能
-	* cpu
-	* memory
-	* file_rnd_read
-	* file_seq_read
-	* file_rnd_write
-	* file_seq_write
-	* syscall
-	* network
-* コンテナがホストで使用するリソース
-	* lifecycle
-	* resource_cpu
-	* resource_memory
-	* resource_storage
+### コンテナ内部の処理性能
+* cpu
+* memory
+* file_rnd_read
+* file_seq_read
+* file_rnd_write
+* file_seq_write
+* syscall
+* network
+### コンテナがホストで使用するリソース
+* lifecycle
+* resource_cpu
+* resource_memory
+* resource_storage
 
  
 # Requirement
  
 以下の全てのコマンドが使用できることを確認してください
 
-#### docker  
+### docker  
 [リンク先](https://matsuand.github.io/docs.docker.jp.onthefly/engine/install/ubuntu/)を参考にDockerをインストール  
 インストール後に、sudo権限なしでdockerコマンドを実行できるように変更  
 ```bash
@@ -37,17 +37,17 @@ sudo usermod -aG docker ユーザ名
 sudo reboot
 ```
 
-#### sysstat  
+### sysstat  
 ```bash
 sudo apt install -y sysstat
 ```
 
-#### free  
+### free  
 ```bash
 sudo apt install -y procps
 ```
 
-#### python3 (ライブラリ含む)  
+### python3 (ライブラリ含む)  
 ```bash
 sudo apt install -y python3
 sudo apt install -y python3-pip
@@ -57,16 +57,17 @@ pip3 install matplotlib
  
 # Installation
 
-githubからリポジトリをクローンする  
+### githubからこのリポジトリをクローンする  
 ```bash
 git clone https://github.com/ertlnagoya/Container_Eval_Tool_M1/
 ```
 <br>
+### 低レベルランタイムのインストール
 必要に応じて低レベルランタイムをインストールする  
 
 その後、/etc/docker/daemon.jsonに低ベレルランタイムのリンク先を記入  
 
-#### [crun](https://github.com/containers/crun)の場合
+### [crun](https://github.com/containers/crun)の場合
 ```bash
 #依存ツールをインストール
 sudo apt-get install -y make git gcc build-essential pkgconf libtool \
@@ -85,7 +86,7 @@ sudo make install
 sudo vi /etc/docker/daemon.json
 ```
   
-/etc/docker/daemon.jsonの中身
+### /etc/docker/daemon.jsonの中身
 ```bash
 {
     "runtimes": {
