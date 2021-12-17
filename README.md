@@ -1,9 +1,6 @@
 # Container_Eval_Tool_M1
- 
 コンテナ作成時に使用する低レベルランタイムの評価ツールです。   
 自動でベンチマークの実行、グラフとログの作成を行います。
-<br>
-<br>
 
 # Features
  
@@ -23,7 +20,6 @@
 * resource_cpu
 * resource_memory
 * resource_storage
-<br>
 
 # Requirement
  
@@ -55,8 +51,6 @@ $ sudo apt install -y python3-pip
 $ pip3 install numpy
 $ pip3 install matplotlib
 ```
-
-<br>
 
 # Installation
 
@@ -123,8 +117,8 @@ $ source start_bench.sh cpu
 
 # Author
  
-#### 名前  
-西村 惇  
+#### 名前（Name）  
+西村 惇(Nishimura Atsushi)
 #### 所属  
 名古屋大学大学院　情報学研究科　高田研究室　
 #### E-mail  
