@@ -37,9 +37,9 @@ $ sudo apt install -y sysstat
 ```bash
 $ sudo apt install -y procps
 ```
-### iperf(現在調査中) 
+### iperf  
 ```bash
-$ sudo apt install -y procps
+$ sudo apt install -y iperf
 ```
 ### python3 (+pip3,numpy,matplotlib)  
 ```bash
