@@ -60,17 +60,19 @@ $ pip3 install matplotlib
 
 # Installation
 
+### Container_Eval_Tool_M1
 githubからこのリポジトリをクローンして下さい。  
 ```bash
 $ git clone https://github.com/ertlnagoya/Container_Eval_Tool_M1/
 ```
 <br>
+### 低レベルランタイム
 評価したい低レベルランタイムをインストールして下さい。  
 
 その後、/etc/docker/daemon.jsonに低ベレルランタイムのリンク先を記入して下さい。  
 以下に、例を載せますので参考にして下さい。
 
-### [crun](https://github.com/containers/crun)の場合
+#### [crun](https://github.com/containers/crun)の場合
 ```bash
 #crunに必要な依存ツールをインストールします。
 $ sudo apt-get install -y make git gcc build-essential pkgconf libtool \
@@ -89,7 +91,7 @@ $ sudo make install
 $ sudo vi /etc/docker/daemon.json
 ```
   
-### /etc/docker/daemon.jsonの中身
+#### /etc/docker/daemon.jsonの中身
 ```bash
 {
     "runtimes": {
