@@ -65,7 +65,7 @@ for ((i = 0; i < ${#low_level_runtime[@]}; i++)) {
             sleep 3
         }
     elif [ "$1" = "network" ]; then
-        docker run -d --runtime=${low_level_runtime[i]} --name=${low_level_runtime[i]} --ip=172.17.0.2 paipoi/iperf_"$(uname -p)" -s > /dev/null
+        docker run -d --runtime=${low_level_runtime[i]} --name=${low_level_runtime[i]} --ip=172.17.0.2 paipoi/iperf_"$(uname -p)" iperf -s > /dev/null
         wait $!
         sleep 3
         for ((j = 0; j < ${container_num}; j++)) {
