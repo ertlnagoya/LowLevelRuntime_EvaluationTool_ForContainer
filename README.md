@@ -68,9 +68,8 @@ $ git clone https://github.com/ertlnagoya/Container_Eval_Tool_M1/
 ### 低レベルランタイム  
 評価したい低レベルランタイムをインストールして下さい。  
 その後、/etc/docker/daemon.jsonに低ベレルランタイムのリンク先を記入して下さい。  
-以下に、例を載せますので参考にして下さい。
+以下に、[crun](https://github.com/containers/crun)をインストールする例を載せますので参考にして下さい。
 
-### [crun](https://github.com/containers/crun)の場合
 ```bash
 #crunに必要な依存ツールをインストールします。
 $ sudo apt-get install -y make git gcc build-essential pkgconf libtool \
@@ -89,7 +88,7 @@ $ sudo make install
 $ sudo vi /etc/docker/daemon.json
 ```
   
-### /etc/docker/daemon.jsonの中身
+/etc/docker/daemon.jsonの中身を以下のように変更します。
 ```bash
 {
     "runtimes": {
@@ -115,23 +114,19 @@ declare -a low_level_runtime=("crun" "runsc")
 ```bash
 $ source start_bench.sh cpu
 ```
-<br>
-<br>
 
 # Note
  
 * x86_64、arm64のUbuntu20.04での動作を確認しました。
 * dockerfileディレクトリは使用したコンテナイメージのDockerfileをまとめています。  
 * tmpディレクトリはツールの作成時に実験的に作成したファイルをまとめています。
-<br>
-<br>
 
 # Author
  
-* Name
-	* 西村 惇
-* 所属
-	* 名古屋大学大学院　情報学研究科　高田研究室　
-* E-mail
-	* atsushi_n@ertl.jp
+#### 名前  
+西村 惇  
+#### 所属  
+名古屋大学大学院　情報学研究科　高田研究室　
+#### E-mail  
+atsushi_n@ertl.jp
 
