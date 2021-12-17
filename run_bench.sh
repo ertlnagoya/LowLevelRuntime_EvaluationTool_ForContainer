@@ -28,6 +28,7 @@ for ((i = 0; i < ${#low_level_runtime[@]}; i++)) {
         for ((j = 0; j < ${container_num}; j++)) {
             docker run -td --runtime=${low_level_runtime[i]} --name=${low_level_runtime[i]}$j ${container_image} > /dev/null
         }
+        wait $!
         sleep 3
         df -m / >> "$1"/${low_level_runtime[i]}.txt 2>> "$1"/err_war.txt
         for ((j = 0; j < ${container_num}; j++)) {
@@ -60,6 +61,7 @@ for ((i = 0; i < ${#low_level_runtime[@]}; i++)) {
         for ((j = 0; j < ${container_num}; j++)) {
             docker run --runtime=${low_level_runtime[i]} --name=${low_level_runtime[i]}$j paipoi/sysbench_"$(uname -p)" sh -c "sysbench --test=fileio prepare && sysbench --test=fileio --file-test-mode=$container_image --num-threads=1 run" >> "$1"/${low_level_runtime[i]}.txt 2>> "$1"/err_war.txt
             docker stop ${low_level_runtime[i]}$j > /dev/null && docker rm ${low_level_runtime[i]}$j > /dev/null
+            wait $!
             sleep 3
         }
     elif [ "$1" = "network" ]; then
@@ -76,6 +78,7 @@ for ((i = 0; i < ${#low_level_runtime[@]}; i++)) {
         for ((j = 0; j < ${container_num}; j++)) {
             docker run --runtime=${low_level_runtime[i]} --name=${low_level_runtime[i]}$j ${container_image} >> "$1"/${low_level_runtime[i]}.txt 2>> "$1"/err_war.txt
             docker stop ${low_level_runtime[i]}$j > /dev/null && docker rm ${low_level_runtime[i]}$j > /dev/null
+            wait $!
             sleep 3
         }
     fi

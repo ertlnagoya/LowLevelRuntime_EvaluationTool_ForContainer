@@ -37,6 +37,10 @@ $ sudo apt install -y sysstat
 ```bash
 $ sudo apt install -y procps
 ```
+### iperf  
+```bash
+$ sudo apt install -y iperf
+```
 ### python3 (+pip3,numpy,matplotlib)  
 ```bash
 $ sudo apt install -y python3
@@ -95,7 +99,7 @@ $ source start_bench.sh cpu
 ```
 
 # Note
-* x86_64、arm64のUbuntu20.04での動作を確認しました。
+<!--* x86_64、arm64のUbuntu20.04での動作を確認しました。-->
 * dockerfileディレクトリは使用したコンテナイメージのDockerfileをまとめています。  
 * tmpディレクトリはツールの作成時に実験的に作成したファイルをまとめています。
 
