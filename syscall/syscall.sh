@@ -5,4 +5,4 @@ declare -a low_level_runtime=("crun" "runsc")
 #各低レベルランタイムについてコンテナを立ち上げる個数
 container_num=2
 #コンテナイメージの指定
-container_image="paipoi/unixbench_"$(uname -p)
+container_image="paipoi/unixbench_"$(uname -p)" ./Run -v -i 10 -c 1 syscall"

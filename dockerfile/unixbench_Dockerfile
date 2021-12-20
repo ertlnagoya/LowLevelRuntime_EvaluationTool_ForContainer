@@ -5,4 +5,3 @@ git clone https://github.com/kdlucas/byte-unixbench.git &&\
 cd byte-unixbench/UnixBench &&\
 make all
 WORKDIR /byte-unixbench/UnixBench
-CMD ["./Run","-v","-i","10","-c","1","syscall"]
