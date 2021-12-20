@@ -60,6 +60,7 @@ for ((i = 0; i < ${#low_level_runtime[@]}; i++)) {
     elif [ "$1" = "file_rnd_read" ] ||  [ "$1" = "file_seq_read" ]; then
         for ((j = 0; j < ${container_num}; j++)) {
             docker run --runtime=${low_level_runtime[i]} --name=${low_level_runtime[i]}$j paipoi/sysbench_"$(uname -p)" sh -c "sysbench --test=fileio prepare && sysbench --test=fileio --file-test-mode=$container_image --num-threads=1 run" >> "$1"/${low_level_runtime[i]}.txt 2>> "$1"/err_war.txt
+            wait $!
             docker stop ${low_level_runtime[i]}$j > /dev/null && docker rm ${low_level_runtime[i]}$j > /dev/null
             wait $!
             sleep 3
@@ -67,7 +68,6 @@ for ((i = 0; i < ${#low_level_runtime[@]}; i++)) {
     elif [ "$1" = "network" ]; then
         docker run -d --runtime=${low_level_runtime[i]} --name=${low_level_runtime[i]} --ip=172.17.0.2 paipoi/iperf_"$(uname -p)" iperf -s > /dev/null
         wait $!
-        sleep 3
         for ((j = 0; j < ${container_num}; j++)) {
             iperf -f M -c 172.17.0.2 >> "$1"/${low_level_runtime[i]}.txt 2>> "$1"/err_war.txt
             wait $!
@@ -77,6 +77,7 @@ for ((i = 0; i < ${#low_level_runtime[@]}; i++)) {
     else
         for ((j = 0; j < ${container_num}; j++)) {
             docker run --runtime=${low_level_runtime[i]} --name=${low_level_runtime[i]}$j ${container_image} >> "$1"/${low_level_runtime[i]}.txt 2>> "$1"/err_war.txt
+            wait $!
             docker stop ${low_level_runtime[i]}$j > /dev/null && docker rm ${low_level_runtime[i]}$j > /dev/null
             wait $!
             sleep 3
