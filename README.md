@@ -99,7 +99,7 @@ $ source start_bench.sh cpu
 ```
 
 # Note
-<!--* x86_64、arm64のUbuntu20.04での動作を確認しました。-->
+* x86_64のUbuntu18.04とUbuntu20.04、aarch64のUbuntu20.04において、crunとrunscを指定した際の動作を確認しました。  
 * dockerfileディレクトリは使用したコンテナイメージのDockerfileをまとめています。  
 * tmpディレクトリはツールの作成時に実験的に作成したファイルをまとめています。
 
