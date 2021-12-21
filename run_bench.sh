@@ -1,6 +1,9 @@
 #!/bin/bash
 
 #メイン処理
+
+sleep_time=3
+
 rm -f "$1"/err_war.txt
 for ((i = 0; i < ${#low_level_runtime[@]}; i++)) {
     rm -f "$1"/${low_level_runtime[i]}.txt
@@ -21,7 +24,7 @@ for ((i = 0; i < ${#low_level_runtime[@]}; i++)) {
             time -p (docker rm ${low_level_runtime[i]}$j > /dev/null) &>> lifecycle/${low_level_runtime[i]}.txt
             wait $!
             echo "" >> lifecycle/${low_level_runtime[i]}.txt
-            sleep 3
+            sleep ${sleep_time}
         }
     elif [ "$1" = "resource_storage" ]; then
         df -m / >> "$1"/${low_level_runtime[i]}.txt 2>> "$1"/err_war.txt
@@ -29,7 +32,7 @@ for ((i = 0; i < ${#low_level_runtime[@]}; i++)) {
             docker run -td --runtime=${low_level_runtime[i]} --name=${low_level_runtime[i]}$j ${container_image} > /dev/null
         }
         wait $!
-        sleep 3
+        sleep ${sleep_time}
         df -m / >> "$1"/${low_level_runtime[i]}.txt 2>> "$1"/err_war.txt
         for ((j = 0; j < ${container_num}; j++)) {
             docker stop ${low_level_runtime[i]}$j > /dev/null && docker rm ${low_level_runtime[i]}$j > /dev/null
@@ -56,31 +59,37 @@ for ((i = 0; i < ${#low_level_runtime[@]}; i++)) {
             docker rm ${low_level_runtime[i]}$j > /dev/null
         }
         wait $!
-        sleep 3
+        sleep ${sleep_time}
     elif [ "$1" = "file_rnd_read" ] ||  [ "$1" = "file_seq_read" ]; then
         for ((j = 0; j < ${container_num}; j++)) {
             docker run --runtime=${low_level_runtime[i]} --name=${low_level_runtime[i]}$j paipoi/sysbench_"$(uname -p)" sh -c "sysbench --test=fileio prepare && sysbench --test=fileio --file-test-mode=$container_image --num-threads=1 run" >> "$1"/${low_level_runtime[i]}.txt 2>> "$1"/err_war.txt
             wait $!
             docker stop ${low_level_runtime[i]}$j > /dev/null && docker rm ${low_level_runtime[i]}$j > /dev/null
             wait $!
-            sleep 3
+            sleep ${sleep_time}
         }
     elif [ "$1" = "network" ]; then
         docker run -d --runtime=${low_level_runtime[i]} --name=${low_level_runtime[i]} --ip=172.17.0.2 paipoi/iperf_"$(uname -p)" iperf -s > /dev/null
         wait $!
+        sleep ${sleep_time}
         for ((j = 0; j < ${container_num}; j++)) {
             iperf -f M -c 172.17.0.2 >> "$1"/${low_level_runtime[i]}.txt 2>> "$1"/err_war.txt
             wait $!
-            sleep 3         
+            sleep ${sleep_time}   
         }
         docker stop ${low_level_runtime[i]} > /dev/null && docker rm ${low_level_runtime[i]} > /dev/null
     else
         for ((j = 0; j < ${container_num}; j++)) {
             docker run --runtime=${low_level_runtime[i]} --name=${low_level_runtime[i]}$j ${container_image} >> "$1"/${low_level_runtime[i]}.txt 2>> "$1"/err_war.txt
             wait $!
+            tmp="docker ps -a | grep ${low_level_runtime[i]}$j | grep 'Exited (0)'"
+            if [ -z "$tmp" ]; then
+                docker start ${low_level_runtime[i]}$j && docker attach ${low_level_runtime[i]}$j >> "$1"/${low_level_runtime[i]}.txt 2>> "$1"/err_war.txt
+            fi
+            wait $!
             docker stop ${low_level_runtime[i]}$j > /dev/null && docker rm ${low_level_runtime[i]}$j > /dev/null
             wait $!
-            sleep 3
+            sleep ${sleep_time}
         }
     fi
     echo ${low_level_runtime[i]} " Finish"
