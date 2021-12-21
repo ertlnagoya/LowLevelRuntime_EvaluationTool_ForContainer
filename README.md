@@ -56,8 +56,10 @@ githubからこのリポジトリをクローンして下さい。
 $ git clone https://github.com/ertlnagoya/Container_Eval_Tool_M1/
 ```
 ### 低レベルランタイム  
-評価したい低レベルランタイムをインストールして下さい。  
-その後、/etc/docker/daemon.jsonに低ベレルランタイムのリンク先を記入して下さい。  
+デフォルトで[crun](https://github.com/containers/crun)と[runsc](https://gvisor.dev/docs/user_guide/install/)を使用するように設定しています。  
+必要に応じて、評価したい低レベルランタイムをインストールして下さい。  
+インストール後、/etc/docker/daemon.jsonに低ベレルランタイムのリンク先を記入して下さい。  
+
 以下に、[crun](https://github.com/containers/crun)をインストールする例を載せますので参考にして下さい。  
 ```bash
 #crunに必要な依存ツールをインストールします。
@@ -99,7 +101,7 @@ $ source start_bench.sh cpu
 ```
 
 # Note
-<!--* x86_64、arm64のUbuntu20.04での動作を確認しました。-->
+* x86_64のUbuntu18.04とUbuntu20.04、aarch64のUbuntu20.04において、crunとrunscを指定した際の動作を確認しました。  
 * dockerfileディレクトリは使用したコンテナイメージのDockerfileをまとめています。  
 * tmpディレクトリはツールの作成時に実験的に作成したファイルをまとめています。
 
