@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #使用する低レベルランタイムを宣言
-declare -a low_level_runtime=("cri-o-runc" "runsc" "crun")
+declare -a low_level_runtime=("runsc" "crun")
 #各低レベルランタイムについてコンテナを立ち上げる個数
 container_num=20
 #コンテナイメージの指定
