@@ -35,7 +35,7 @@ for ((i = 0; i < ${#low_level_runtime[@]}; i++)) {
         sleep ${sleep_time}
         df -m / >> "$1"/${low_level_runtime[i]}.txt 2>> "$1"/err_war.txt
         for ((j = 0; j < ${container_num}; j++)) {
-            docker stop ${low_level_runtime[i]}$j > /dev/null && docker rm ${low_level_runtime[i]}$j > /dev/null
+            docker rm -f ${low_level_runtime[i]}$j > /dev/null
         }
         wait $!
     elif [ "$1" = "resource_cpu" ] || [ "$1" = "resource_memory" ]; then
@@ -55,8 +55,7 @@ for ((i = 0; i < ${#low_level_runtime[@]}; i++)) {
         kill ${ps_id}
         #コンテナの削除
         for ((j = 0; j < ${container_num}; j++)) {
-            docker stop ${low_level_runtime[i]}$j > /dev/null
-            docker rm ${low_level_runtime[i]}$j > /dev/null
+            docker rm -f ${low_level_runtime[i]}$j > /dev/null
         }
         wait $!
         sleep ${sleep_time}
@@ -64,7 +63,7 @@ for ((i = 0; i < ${#low_level_runtime[@]}; i++)) {
         for ((j = 0; j < ${container_num}; j++)) {
             docker run --runtime=${low_level_runtime[i]} --name=${low_level_runtime[i]}$j paipoi/sysbench_"$(uname -p)" sh -c "sysbench --test=fileio prepare && sysbench --test=fileio --file-test-mode=$container_image --num-threads=1 run" >> "$1"/${low_level_runtime[i]}.txt 2>> "$1"/err_war.txt
             wait $!
-            docker stop ${low_level_runtime[i]}$j > /dev/null && docker rm ${low_level_runtime[i]}$j > /dev/null
+            docker rm -f ${low_level_runtime[i]}$j > /dev/null
             wait $!
             sleep ${sleep_time}
         }
@@ -77,7 +76,7 @@ for ((i = 0; i < ${#low_level_runtime[@]}; i++)) {
             wait $!
             sleep ${sleep_time}   
         }
-        docker stop ${low_level_runtime[i]} > /dev/null && docker rm ${low_level_runtime[i]} > /dev/null
+        docker rm -f ${low_level_runtime[i]} > /dev/null
     else
         for ((j = 0; j < ${container_num}; j++)) {
             docker run --runtime=${low_level_runtime[i]} --name=${low_level_runtime[i]}$j ${container_image} >> "$1"/${low_level_runtime[i]}.txt 2>> "$1"/err_war.txt
@@ -87,7 +86,7 @@ for ((i = 0; i < ${#low_level_runtime[@]}; i++)) {
                 docker start ${low_level_runtime[i]}$j && docker attach ${low_level_runtime[i]}$j >> "$1"/${low_level_runtime[i]}.txt 2>> "$1"/err_war.txt
             fi
             wait $!
-            docker stop ${low_level_runtime[i]}$j > /dev/null && docker rm ${low_level_runtime[i]}$j > /dev/null
+            docker rm -f ${low_level_runtime[i]}$j > /dev/null
             wait $!
             sleep ${sleep_time}
         }
