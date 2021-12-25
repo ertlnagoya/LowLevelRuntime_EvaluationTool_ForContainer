@@ -1,4 +1,0 @@
-Filesystem     1M-blocks  Used Available Use% Mounted on
-/dev/sda2         277570 80173    183230  31% /
-Filesystem     1M-blocks  Used Available Use% Mounted on
-/dev/sda2         277570 80184    183219  31% /
