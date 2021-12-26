@@ -149,7 +149,7 @@ elif(benchmark == "resource_storage"):
     plt.tick_params(labelbottom=False,bottom=False)
     plt.xlabel("Runtime")
     plt.ylabel("Storage Usage(MB) : " +str(container_num) + " containers")
-    plt.legend()
+    fig.legend(labels=low_level_runtime,loc='upper center',ncol=4)
     plt.savefig(benchmark+"/"+"Storage_Usage.png")
     plt.show()
 elif(benchmark == "resource_cpu" or benchmark == "resource_memory"):
@@ -168,7 +168,7 @@ elif(benchmark == "resource_cpu" or benchmark == "resource_memory"):
     plt.ylim(0,)
     plt.xlabel("Time(sec)")
     plt.ylabel(y_label)
-    plt.legend()
+    fig.legend(labels=low_level_runtime,loc='upper center',ncol=4)
     plt.savefig(benchmark+"/"+y_label+".png")
     plt.show()
     #コンテナ作成前後でのリソース使用量の差
@@ -181,7 +181,7 @@ elif(benchmark == "resource_cpu" or benchmark == "resource_memory"):
     plt.tick_params(labelbottom=False,bottom=False)
     plt.xlabel("Runtime")
     plt.ylabel(y_label + " : " +str(container_num) + " containers")
-    plt.legend()
+    fig.legend(labels=low_level_runtime,loc='upper center',ncol=4)
     plt.savefig(benchmark+"/"+y_label+".png")
     plt.show()
 else:
@@ -210,6 +210,6 @@ else:
         plt.tick_params(labelbottom=False,bottom=False)
         plt.xlabel("Runtime")
         plt.ylabel(all_name[n]+"_"+ y_label)
-        plt.legend()
+        fig.legend(labels=low_level_runtime,loc='upper center',ncol=4)
         plt.savefig(benchmark+"/"+all_name[n]+"_"+y_label+".png")
         plt.show()
