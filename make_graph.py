@@ -200,7 +200,7 @@ else:
         else: edit_data_sysbench(i,benchmark+"/"+i+".txt",result_list)
         max_list.append(max(result_list))
         min_list.append(min(result_list))
-        avg_list.append(sum(result_list) / len(result_list))
+        avg_list.append(round(sum(result_list) / len(result_list),4))
     x_line = np.linspace(1,len(low_level_runtime),len(low_level_runtime))
     for n in range(len(all_list)):
         fig = plt.figure()
