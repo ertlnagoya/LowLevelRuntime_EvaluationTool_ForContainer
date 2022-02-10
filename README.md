@@ -52,7 +52,7 @@ $ pip3 install matplotlib
 ### journalctl  
 resource_storageではsystem.journalのサイズが結果に影響を及ぼしかねません。  
 そのため、/etc/systemd/journald.confを変更し、journaldでログを収集しないように変更します。  
-評価が終了したら、元の設定に戻しても大丈夫です。  
+ベンチマークが終了したら、元の設定に戻しても構いません。  
 ```bash
 $ sudo vi /etc/systemd/journald.conf
 ```  
