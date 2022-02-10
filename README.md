@@ -49,6 +49,21 @@ $ sudo apt install -y python3-pip
 $ pip3 install numpy
 $ pip3 install matplotlib
 ```
+### journalctl  
+resource_storageではsystem.journalのサイズが結果に影響を及ぼすため、/etc/systemd/journald.confを変更し、journaldでログを収集しないように変更します。評価が終了したら、元の設定に戻しても大丈夫です。
+$ sudo vi /etc/systemd/journald.conf
+```  
+/etc/systemd/journald.confの中身を以下のように変更します。
+```bash
+〜〜〜〜〜
+[Journal]
+Storage=none
+〜〜〜〜〜
+```
+変更後は、以下のコマンドで設定ファイルの内容を反映させて下さい。
+$ sudo systemctl daemon-reload 
+$ sudo systemctl restart systemd-journald.service
+```  
 
 # Installation
 ### Container_Eval_Tool_M1  
