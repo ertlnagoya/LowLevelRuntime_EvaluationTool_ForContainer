@@ -50,7 +50,8 @@ $ pip3 install numpy
 $ pip3 install matplotlib
 ```
 ### journalctl  
-resource_storageではsystem.journalのサイズが結果に影響を及ぼすため、/etc/systemd/journald.confを変更し、journaldでログを収集しないように変更します。  
+resource_storageではsystem.journalのサイズが結果に影響を及ぼしかねません。  
+そのため、/etc/systemd/journald.confを変更し、journaldでログを収集しないように変更します。  
 評価が終了したら、元の設定に戻しても大丈夫です。  
 ```bash
 $ sudo vi /etc/systemd/journald.conf
