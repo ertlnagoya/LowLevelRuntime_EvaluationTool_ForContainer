@@ -1,0 +1,8 @@
+    238 switch
+     32 write
+      2 procexit
+      2 madvise
+      2 alarm
+      1 futex
+      1 exit_group
+      1 exit

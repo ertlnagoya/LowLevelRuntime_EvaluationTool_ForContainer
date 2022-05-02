@@ -1,0 +1,90 @@
+1cycle
+create
+real 0.33
+user 0.01
+sys 0.02
+start
+real 1.41
+user 0.03
+sys 0.00
+stop
+real 0.59
+user 0.03
+sys 0.01
+remove
+real 0.34
+user 0.02
+sys 0.01
+
+2cycle
+create
+real 0.34
+user 0.03
+sys 0.01
+start
+real 1.40
+user 0.02
+sys 0.01
+stop
+real 0.67
+user 0.02
+sys 0.01
+remove
+real 0.35
+user 0.02
+sys 0.01
+
+3cycle
+create
+real 0.41
+user 0.01
+sys 0.03
+start
+real 1.39
+user 0.02
+sys 0.01
+stop
+real 0.67
+user 0.02
+sys 0.01
+remove
+real 0.34
+user 0.02
+sys 0.01
+
+4cycle
+create
+real 0.37
+user 0.03
+sys 0.01
+start
+real 1.30
+user 0.02
+sys 0.01
+stop
+real 0.72
+user 0.02
+sys 0.01
+remove
+real 0.35
+user 0.02
+sys 0.01
+
+5cycle
+create
+real 0.40
+user 0.02
+sys 0.02
+start
+real 1.40
+user 0.02
+sys 0.02
+stop
+real 0.62
+user 0.03
+sys 0.01
+remove
+real 0.37
+user 0.02
+sys 0.02
+

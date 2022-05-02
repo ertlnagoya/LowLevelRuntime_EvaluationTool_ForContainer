@@ -1,0 +1,360 @@
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 1
+Random number generator seed is 0 and will be ignored
+
+
+Doing memory operations speed test
+Memory block size: 1024K
+
+Memory transfer size: 102400M
+
+Memory operations type: write
+Memory scope type: global
+Threads started!
+Done.
+
+Operations performed: 102400 ( 8536.73 ops/sec)
+
+102400.00 MB transferred (8536.73 MB/sec)
+
+
+General statistics:
+    total time:                          11.9952s
+    total number of events:              102400
+    total time taken by event execution: 11.9740
+    response time:
+         min:                                  0.11ms
+         avg:                                  0.12ms
+         max:                                  0.43ms
+         approx.  95 percentile:               0.12ms
+
+Threads fairness:
+    events (avg/stddev):           102400.0000/0.00
+    execution time (avg/stddev):   11.9740/0.00
+
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 1
+Random number generator seed is 0 and will be ignored
+
+
+Doing memory operations speed test
+Memory block size: 1024K
+
+Memory transfer size: 102400M
+
+Memory operations type: write
+Memory scope type: global
+Threads started!
+Done.
+
+Operations performed: 102400 ( 8608.48 ops/sec)
+
+102400.00 MB transferred (8608.48 MB/sec)
+
+
+General statistics:
+    total time:                          11.8952s
+    total number of events:              102400
+    total time taken by event execution: 11.8747
+    response time:
+         min:                                  0.11ms
+         avg:                                  0.12ms
+         max:                                  0.37ms
+         approx.  95 percentile:               0.12ms
+
+Threads fairness:
+    events (avg/stddev):           102400.0000/0.00
+    execution time (avg/stddev):   11.8747/0.00
+
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 1
+Random number generator seed is 0 and will be ignored
+
+
+Doing memory operations speed test
+Memory block size: 1024K
+
+Memory transfer size: 102400M
+
+Memory operations type: write
+Memory scope type: global
+Threads started!
+Done.
+
+Operations performed: 102400 ( 8602.32 ops/sec)
+
+102400.00 MB transferred (8602.32 MB/sec)
+
+
+General statistics:
+    total time:                          11.9038s
+    total number of events:              102400
+    total time taken by event execution: 11.8828
+    response time:
+         min:                                  0.11ms
+         avg:                                  0.12ms
+         max:                                  0.52ms
+         approx.  95 percentile:               0.12ms
+
+Threads fairness:
+    events (avg/stddev):           102400.0000/0.00
+    execution time (avg/stddev):   11.8828/0.00
+
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 1
+Random number generator seed is 0 and will be ignored
+
+
+Doing memory operations speed test
+Memory block size: 1024K
+
+Memory transfer size: 102400M
+
+Memory operations type: write
+Memory scope type: global
+Threads started!
+Done.
+
+Operations performed: 102400 ( 8586.27 ops/sec)
+
+102400.00 MB transferred (8586.27 MB/sec)
+
+
+General statistics:
+    total time:                          11.9260s
+    total number of events:              102400
+    total time taken by event execution: 11.9052
+    response time:
+         min:                                  0.11ms
+         avg:                                  0.12ms
+         max:                                  0.33ms
+         approx.  95 percentile:               0.12ms
+
+Threads fairness:
+    events (avg/stddev):           102400.0000/0.00
+    execution time (avg/stddev):   11.9052/0.00
+
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 1
+Random number generator seed is 0 and will be ignored
+
+
+Doing memory operations speed test
+Memory block size: 1024K
+
+Memory transfer size: 102400M
+
+Memory operations type: write
+Memory scope type: global
+Threads started!
+Done.
+
+Operations performed: 102400 ( 8563.67 ops/sec)
+
+102400.00 MB transferred (8563.67 MB/sec)
+
+
+General statistics:
+    total time:                          11.9575s
+    total number of events:              102400
+    total time taken by event execution: 11.9363
+    response time:
+         min:                                  0.11ms
+         avg:                                  0.12ms
+         max:                                  0.34ms
+         approx.  95 percentile:               0.12ms
+
+Threads fairness:
+    events (avg/stddev):           102400.0000/0.00
+    execution time (avg/stddev):   11.9363/0.00
+
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 1
+Random number generator seed is 0 and will be ignored
+
+
+Doing memory operations speed test
+Memory block size: 1024K
+
+Memory transfer size: 102400M
+
+Memory operations type: write
+Memory scope type: global
+Threads started!
+Done.
+
+Operations performed: 102400 ( 8612.21 ops/sec)
+
+102400.00 MB transferred (8612.21 MB/sec)
+
+
+General statistics:
+    total time:                          11.8901s
+    total number of events:              102400
+    total time taken by event execution: 11.8694
+    response time:
+         min:                                  0.11ms
+         avg:                                  0.12ms
+         max:                                  0.34ms
+         approx.  95 percentile:               0.12ms
+
+Threads fairness:
+    events (avg/stddev):           102400.0000/0.00
+    execution time (avg/stddev):   11.8694/0.00
+
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 1
+Random number generator seed is 0 and will be ignored
+
+
+Doing memory operations speed test
+Memory block size: 1024K
+
+Memory transfer size: 102400M
+
+Memory operations type: write
+Memory scope type: global
+Threads started!
+Done.
+
+Operations performed: 102400 ( 8526.68 ops/sec)
+
+102400.00 MB transferred (8526.68 MB/sec)
+
+
+General statistics:
+    total time:                          12.0094s
+    total number of events:              102400
+    total time taken by event execution: 11.9882
+    response time:
+         min:                                  0.11ms
+         avg:                                  0.12ms
+         max:                                  0.27ms
+         approx.  95 percentile:               0.12ms
+
+Threads fairness:
+    events (avg/stddev):           102400.0000/0.00
+    execution time (avg/stddev):   11.9882/0.00
+
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 1
+Random number generator seed is 0 and will be ignored
+
+
+Doing memory operations speed test
+Memory block size: 1024K
+
+Memory transfer size: 102400M
+
+Memory operations type: write
+Memory scope type: global
+Threads started!
+Done.
+
+Operations performed: 102400 ( 8621.21 ops/sec)
+
+102400.00 MB transferred (8621.21 MB/sec)
+
+
+General statistics:
+    total time:                          11.8777s
+    total number of events:              102400
+    total time taken by event execution: 11.8568
+    response time:
+         min:                                  0.11ms
+         avg:                                  0.12ms
+         max:                                  0.23ms
+         approx.  95 percentile:               0.12ms
+
+Threads fairness:
+    events (avg/stddev):           102400.0000/0.00
+    execution time (avg/stddev):   11.8568/0.00
+
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 1
+Random number generator seed is 0 and will be ignored
+
+
+Doing memory operations speed test
+Memory block size: 1024K
+
+Memory transfer size: 102400M
+
+Memory operations type: write
+Memory scope type: global
+Threads started!
+Done.
+
+Operations performed: 102400 ( 8543.92 ops/sec)
+
+102400.00 MB transferred (8543.92 MB/sec)
+
+
+General statistics:
+    total time:                          11.9851s
+    total number of events:              102400
+    total time taken by event execution: 11.9640
+    response time:
+         min:                                  0.11ms
+         avg:                                  0.12ms
+         max:                                  2.20ms
+         approx.  95 percentile:               0.12ms
+
+Threads fairness:
+    events (avg/stddev):           102400.0000/0.00
+    execution time (avg/stddev):   11.9640/0.00
+
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 1
+Random number generator seed is 0 and will be ignored
+
+
+Doing memory operations speed test
+Memory block size: 1024K
+
+Memory transfer size: 102400M
+
+Memory operations type: write
+Memory scope type: global
+Threads started!
+Done.
+
+Operations performed: 102400 ( 8615.89 ops/sec)
+
+102400.00 MB transferred (8615.89 MB/sec)
+
+
+General statistics:
+    total time:                          11.8850s
+    total number of events:              102400
+    total time taken by event execution: 11.8642
+    response time:
+         min:                                  0.11ms
+         avg:                                  0.12ms
+         max:                                  0.48ms
+         approx.  95 percentile:               0.12ms
+
+Threads fairness:
+    events (avg/stddev):           102400.0000/0.00
+    execution time (avg/stddev):   11.8642/0.00
+

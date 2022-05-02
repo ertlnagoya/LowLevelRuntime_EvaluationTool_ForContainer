@@ -4,7 +4,7 @@ import sys
 
 from numpy.lib.twodim_base import mask_indices
 
-
+#get data from result-txt of benchmark
 def edit_data_lifecycle(file_name,create_list,start_list,stop_list,remove_list):
     file = open(file_name)
     lines = file.readlines()
@@ -92,8 +92,20 @@ def edit_data_network(runtime,file_name,bandwidth_list):
     print("\n"+runtime)
     print(bandwidth_list)
     file.close()
+    
+def edit_data_syscall_collect(runtime,file_name,syscall_dict,Top_num):
+    file = open(file_name)
+    lines = file.readlines()
+    
+    if(len(lines) > 0):
+        for i in range(Top_num):
+            line = lines[i].split()
+            syscall_dict[line[1]] = int(line[0])
+    file.close()
+
 
 #main
+#edit data and make graph
 benchmark = str(sys.argv[1])
 container_num = int(sys.argv[2])
 low_level_runtime = []
@@ -184,6 +196,17 @@ elif(benchmark == "resource_cpu" or benchmark == "resource_memory"):
     fig.legend(labels=low_level_runtime,loc='upper center',ncol=4)
     plt.savefig(benchmark+"/"+y_label+".png")
     plt.show()
+elif(benchmark == "syscall_collect"):
+    fig = plt.figure()
+    x_line = np.linspace(1,len(low_level_runtime),len(low_level_runtime))
+    Top_num = 5 #ここで上位何個のシステムコールを表示させるかを指定する
+    for i in range(len(low_level_runtime)):
+        syscall_dict = {}
+        edit_data_syscall_collect(low_level_runtime[i],benchmark+"/"+low_level_runtime[i]+"_sort.txt",syscall_dict,Top_num)
+        plt.pie(syscall_dict.values(),labels=syscall_dict.keys(),startangle=90,autopct="%1.1f%%")
+        plt.xlabel(low_level_runtime[i] + " Top " + str(Top_num) + " syscall")
+        plt.savefig(benchmark+"/"+ low_level_runtime[i] +"_Syscall_Collect.png")
+        plt.show()
 else:
     if(benchmark == "syscall"): y_label = "Score"
     elif(benchmark == "network"): y_label = "Bandwidth(MBytes-sec)"

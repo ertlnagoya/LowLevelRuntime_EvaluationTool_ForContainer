@@ -1,0 +1,940 @@
+make all
+make[1]: Entering directory '/byte-unixbench/UnixBench'
+make distr
+make[2]: Entering directory '/byte-unixbench/UnixBench'
+Checking distribution of files
+./pgms  exists
+./src  exists
+./testdir  exists
+./tmp  exists
+./results  exists
+make[2]: Leaving directory '/byte-unixbench/UnixBench'
+make programs
+make[2]: Entering directory '/byte-unixbench/UnixBench'
+make[2]: Nothing to be done for 'programs'.
+make[2]: Leaving directory '/byte-unixbench/UnixBench'
+make[1]: Leaving directory '/byte-unixbench/UnixBench'
+
+   #    #  #    #  #  #    #          #####   ######  #    #   ####   #    #
+   #    #  ##   #  #   #  #           #    #  #       ##   #  #    #  #    #
+   #    #  # #  #  #    ##            #####   #####   # #  #  #       ######
+   #    #  #  # #  #    ##            #    #  #       #  # #  #       #    #
+   #    #  #   ##  #   #  #           #    #  #       #   ##  #    #  #    #
+    ####   #    #  #  #    #          #####   ######  #    #   ####   #    #
+
+   Version 5.1.3                      Based on the Byte Magazine Unix Benchmark
+
+   Multi-CPU version                  Version 5 revisions by Ian Smith,
+                                      Sunnyvale, CA, USA
+   January 13, 2011                   johantheghost at yahoo period com
+
+------------------------------------------------------------------------------
+   Use directories for:
+      * File I/O tests (named fs***) = /byte-unixbench/UnixBench/tmp
+      * Results                      = /byte-unixbench/UnixBench/results
+------------------------------------------------------------------------------
+
+
+Tests to run: syscall
+Run with 1 copy
+
+1 x System Call Overhead  1
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/04022237b2ed-2022-03-24-01.log""
+COPIES: "1"
+ 2
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/04022237b2ed-2022-03-24-01.log""
+COPIES: "1"
+ 3
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/04022237b2ed-2022-03-24-01.log""
+COPIES: "1"
+ 4
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/04022237b2ed-2022-03-24-01.log""
+COPIES: "1"
+ 5
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/04022237b2ed-2022-03-24-01.log""
+COPIES: "1"
+ 6
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/04022237b2ed-2022-03-24-01.log""
+COPIES: "1"
+ 7
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/04022237b2ed-2022-03-24-01.log""
+COPIES: "1"
+ 8
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/04022237b2ed-2022-03-24-01.log""
+COPIES: "1"
+ 9
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/04022237b2ed-2022-03-24-01.log""
+COPIES: "1"
+ 10
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/04022237b2ed-2022-03-24-01.log""
+COPIES: "1"
+
+
+========================================================================
+   BYTE UNIX Benchmarks (Version 5.1.3)
+
+   System: 04022237b2ed: GNU/Linux
+   OS: GNU/Linux -- 5.4.60 -- #1 SMP Sat Jan 16 02:51:23 UTC 2021
+   Machine: x86_64 (x86_64)
+   Language: en_US.utf8 (charmap="ANSI_X3.4-1968", collate="ANSI_X3.4-1968")
+   CPU 0: Intel(R) Xeon(R) Processor @ 1.10GHz (3024.0 bogomips)
+          x86-64, MMX, Physical Address Ext, SYSENTER/SYSEXIT, SYSCALL/SYSRET, Intel virtualization
+   04:25:54 up 0 min,  0 users,  load average: 0.00, 0.00, 0.00; runlevel 
+
+------------------------------------------------------------------------
+Benchmark Run: Thu Mar 24 2022 04:25:54 - 04:28:04
+1 CPU in system; running 1 parallel copy of tests
+
+System Call Overhead                         375611.9 lps   (10.0 s, 7 samples)
+
+System Benchmarks Partial Index              BASELINE       RESULT    INDEX
+System Call Overhead                          15000.0     375611.9    250.4
+                                                                   ========
+System Benchmarks Index Score (Partial Only)                          250.4
+
+make all
+make[1]: Entering directory '/byte-unixbench/UnixBench'
+make distr
+make[2]: Entering directory '/byte-unixbench/UnixBench'
+Checking distribution of files
+./pgms  exists
+./src  exists
+./testdir  exists
+./tmp  exists
+./results  exists
+make[2]: Leaving directory '/byte-unixbench/UnixBench'
+make programs
+make[2]: Entering directory '/byte-unixbench/UnixBench'
+make[2]: Nothing to be done for 'programs'.
+make[2]: Leaving directory '/byte-unixbench/UnixBench'
+make[1]: Leaving directory '/byte-unixbench/UnixBench'
+
+   #    #  #    #  #  #    #          #####   ######  #    #   ####   #    #
+   #    #  ##   #  #   #  #           #    #  #       ##   #  #    #  #    #
+   #    #  # #  #  #    ##            #####   #####   # #  #  #       ######
+   #    #  #  # #  #    ##            #    #  #       #  # #  #       #    #
+   #    #  #   ##  #   #  #           #    #  #       #   ##  #    #  #    #
+    ####   #    #  #  #    #          #####   ######  #    #   ####   #    #
+
+   Version 5.1.3                      Based on the Byte Magazine Unix Benchmark
+
+   Multi-CPU version                  Version 5 revisions by Ian Smith,
+                                      Sunnyvale, CA, USA
+   January 13, 2011                   johantheghost at yahoo period com
+
+------------------------------------------------------------------------------
+   Use directories for:
+      * File I/O tests (named fs***) = /byte-unixbench/UnixBench/tmp
+      * Results                      = /byte-unixbench/UnixBench/results
+------------------------------------------------------------------------------
+
+
+Tests to run: syscall
+Run with 1 copy
+
+1 x System Call Overhead  1
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/5803ad36ca1e-2022-03-24-01.log""
+COPIES: "1"
+ 2
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/5803ad36ca1e-2022-03-24-01.log""
+COPIES: "1"
+ 3
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/5803ad36ca1e-2022-03-24-01.log""
+COPIES: "1"
+ 4
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/5803ad36ca1e-2022-03-24-01.log""
+COPIES: "1"
+ 5
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/5803ad36ca1e-2022-03-24-01.log""
+COPIES: "1"
+ 6
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/5803ad36ca1e-2022-03-24-01.log""
+COPIES: "1"
+ 7
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/5803ad36ca1e-2022-03-24-01.log""
+COPIES: "1"
+ 8
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/5803ad36ca1e-2022-03-24-01.log""
+COPIES: "1"
+ 9
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/5803ad36ca1e-2022-03-24-01.log""
+COPIES: "1"
+ 10
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/5803ad36ca1e-2022-03-24-01.log""
+COPIES: "1"
+
+
+========================================================================
+   BYTE UNIX Benchmarks (Version 5.1.3)
+
+   System: 5803ad36ca1e: GNU/Linux
+   OS: GNU/Linux -- 5.4.60 -- #1 SMP Sat Jan 16 02:51:23 UTC 2021
+   Machine: x86_64 (x86_64)
+   Language: en_US.utf8 (charmap="ANSI_X3.4-1968", collate="ANSI_X3.4-1968")
+   CPU 0: Intel(R) Xeon(R) Processor @ 1.10GHz (3024.0 bogomips)
+          x86-64, MMX, Physical Address Ext, SYSENTER/SYSEXIT, SYSCALL/SYSRET, Intel virtualization
+   04:28:11 up 0 min,  0 users,  load average: 0.00, 0.00, 0.00; runlevel 
+
+------------------------------------------------------------------------
+Benchmark Run: Thu Mar 24 2022 04:28:11 - 04:30:21
+1 CPU in system; running 1 parallel copy of tests
+
+System Call Overhead                         371934.7 lps   (10.0 s, 7 samples)
+
+System Benchmarks Partial Index              BASELINE       RESULT    INDEX
+System Call Overhead                          15000.0     371934.7    248.0
+                                                                   ========
+System Benchmarks Index Score (Partial Only)                          248.0
+
+make all
+make[1]: Entering directory '/byte-unixbench/UnixBench'
+make distr
+make[2]: Entering directory '/byte-unixbench/UnixBench'
+Checking distribution of files
+./pgms  exists
+./src  exists
+./testdir  exists
+./tmp  exists
+./results  exists
+make[2]: Leaving directory '/byte-unixbench/UnixBench'
+make programs
+make[2]: Entering directory '/byte-unixbench/UnixBench'
+make[2]: Nothing to be done for 'programs'.
+make[2]: Leaving directory '/byte-unixbench/UnixBench'
+make[1]: Leaving directory '/byte-unixbench/UnixBench'
+
+   #    #  #    #  #  #    #          #####   ######  #    #   ####   #    #
+   #    #  ##   #  #   #  #           #    #  #       ##   #  #    #  #    #
+   #    #  # #  #  #    ##            #####   #####   # #  #  #       ######
+   #    #  #  # #  #    ##            #    #  #       #  # #  #       #    #
+   #    #  #   ##  #   #  #           #    #  #       #   ##  #    #  #    #
+    ####   #    #  #  #    #          #####   ######  #    #   ####   #    #
+
+   Version 5.1.3                      Based on the Byte Magazine Unix Benchmark
+
+   Multi-CPU version                  Version 5 revisions by Ian Smith,
+                                      Sunnyvale, CA, USA
+   January 13, 2011                   johantheghost at yahoo period com
+
+------------------------------------------------------------------------------
+   Use directories for:
+      * File I/O tests (named fs***) = /byte-unixbench/UnixBench/tmp
+      * Results                      = /byte-unixbench/UnixBench/results
+------------------------------------------------------------------------------
+
+
+Tests to run: syscall
+Run with 1 copy
+
+1 x System Call Overhead  1
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/fecf49819fb0-2022-03-24-01.log""
+COPIES: "1"
+ 2
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/fecf49819fb0-2022-03-24-01.log""
+COPIES: "1"
+ 3
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/fecf49819fb0-2022-03-24-01.log""
+COPIES: "1"
+ 4
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/fecf49819fb0-2022-03-24-01.log""
+COPIES: "1"
+ 5
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/fecf49819fb0-2022-03-24-01.log""
+COPIES: "1"
+ 6
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/fecf49819fb0-2022-03-24-01.log""
+COPIES: "1"
+ 7
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/fecf49819fb0-2022-03-24-01.log""
+COPIES: "1"
+ 8
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/fecf49819fb0-2022-03-24-01.log""
+COPIES: "1"
+ 9
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/fecf49819fb0-2022-03-24-01.log""
+COPIES: "1"
+ 10
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/fecf49819fb0-2022-03-24-01.log""
+COPIES: "1"
+
+
+========================================================================
+   BYTE UNIX Benchmarks (Version 5.1.3)
+
+   System: fecf49819fb0: GNU/Linux
+   OS: GNU/Linux -- 5.4.60 -- #1 SMP Sat Jan 16 02:51:23 UTC 2021
+   Machine: x86_64 (x86_64)
+   Language: en_US.utf8 (charmap="ANSI_X3.4-1968", collate="ANSI_X3.4-1968")
+   CPU 0: Intel(R) Xeon(R) Processor @ 1.10GHz (3024.0 bogomips)
+          x86-64, MMX, Physical Address Ext, SYSENTER/SYSEXIT, SYSCALL/SYSRET, Intel virtualization
+   04:30:27 up 0 min,  0 users,  load average: 0.00, 0.00, 0.00; runlevel 
+
+------------------------------------------------------------------------
+Benchmark Run: Thu Mar 24 2022 04:30:27 - 04:32:37
+1 CPU in system; running 1 parallel copy of tests
+
+System Call Overhead                         371124.8 lps   (10.0 s, 7 samples)
+
+System Benchmarks Partial Index              BASELINE       RESULT    INDEX
+System Call Overhead                          15000.0     371124.8    247.4
+                                                                   ========
+System Benchmarks Index Score (Partial Only)                          247.4
+
+make all
+make[1]: Entering directory '/byte-unixbench/UnixBench'
+make distr
+make[2]: Entering directory '/byte-unixbench/UnixBench'
+Checking distribution of files
+./pgms  exists
+./src  exists
+./testdir  exists
+./tmp  exists
+./results  exists
+make[2]: Leaving directory '/byte-unixbench/UnixBench'
+make programs
+make[2]: Entering directory '/byte-unixbench/UnixBench'
+make[2]: Nothing to be done for 'programs'.
+make[2]: Leaving directory '/byte-unixbench/UnixBench'
+make[1]: Leaving directory '/byte-unixbench/UnixBench'
+
+   #    #  #    #  #  #    #          #####   ######  #    #   ####   #    #
+   #    #  ##   #  #   #  #           #    #  #       ##   #  #    #  #    #
+   #    #  # #  #  #    ##            #####   #####   # #  #  #       ######
+   #    #  #  # #  #    ##            #    #  #       #  # #  #       #    #
+   #    #  #   ##  #   #  #           #    #  #       #   ##  #    #  #    #
+    ####   #    #  #  #    #          #####   ######  #    #   ####   #    #
+
+   Version 5.1.3                      Based on the Byte Magazine Unix Benchmark
+
+   Multi-CPU version                  Version 5 revisions by Ian Smith,
+                                      Sunnyvale, CA, USA
+   January 13, 2011                   johantheghost at yahoo period com
+
+------------------------------------------------------------------------------
+   Use directories for:
+      * File I/O tests (named fs***) = /byte-unixbench/UnixBench/tmp
+      * Results                      = /byte-unixbench/UnixBench/results
+------------------------------------------------------------------------------
+
+
+Tests to run: syscall
+Run with 1 copy
+
+1 x System Call Overhead  1
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/2215c43e9311-2022-03-24-01.log""
+COPIES: "1"
+ 2
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/2215c43e9311-2022-03-24-01.log""
+COPIES: "1"
+ 3
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/2215c43e9311-2022-03-24-01.log""
+COPIES: "1"
+ 4
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/2215c43e9311-2022-03-24-01.log""
+COPIES: "1"
+ 5
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/2215c43e9311-2022-03-24-01.log""
+COPIES: "1"
+ 6
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/2215c43e9311-2022-03-24-01.log""
+COPIES: "1"
+ 7
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/2215c43e9311-2022-03-24-01.log""
+COPIES: "1"
+ 8
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/2215c43e9311-2022-03-24-01.log""
+COPIES: "1"
+ 9
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/2215c43e9311-2022-03-24-01.log""
+COPIES: "1"
+ 10
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/2215c43e9311-2022-03-24-01.log""
+COPIES: "1"
+
+
+========================================================================
+   BYTE UNIX Benchmarks (Version 5.1.3)
+
+   System: 2215c43e9311: GNU/Linux
+   OS: GNU/Linux -- 5.4.60 -- #1 SMP Sat Jan 16 02:51:23 UTC 2021
+   Machine: x86_64 (x86_64)
+   Language: en_US.utf8 (charmap="ANSI_X3.4-1968", collate="ANSI_X3.4-1968")
+   CPU 0: Intel(R) Xeon(R) Processor @ 1.10GHz (3024.0 bogomips)
+          x86-64, MMX, Physical Address Ext, SYSENTER/SYSEXIT, SYSCALL/SYSRET, Intel virtualization
+   04:32:43 up 0 min,  0 users,  load average: 0.00, 0.00, 0.00; runlevel 
+
+------------------------------------------------------------------------
+Benchmark Run: Thu Mar 24 2022 04:32:43 - 04:34:53
+1 CPU in system; running 1 parallel copy of tests
+
+System Call Overhead                         371944.7 lps   (10.0 s, 7 samples)
+
+System Benchmarks Partial Index              BASELINE       RESULT    INDEX
+System Call Overhead                          15000.0     371944.7    248.0
+                                                                   ========
+System Benchmarks Index Score (Partial Only)                          248.0
+
+make all
+make[1]: Entering directory '/byte-unixbench/UnixBench'
+make distr
+make[2]: Entering directory '/byte-unixbench/UnixBench'
+Checking distribution of files
+./pgms  exists
+./src  exists
+./testdir  exists
+./tmp  exists
+./results  exists
+make[2]: Leaving directory '/byte-unixbench/UnixBench'
+make programs
+make[2]: Entering directory '/byte-unixbench/UnixBench'
+make[2]: Nothing to be done for 'programs'.
+make[2]: Leaving directory '/byte-unixbench/UnixBench'
+make[1]: Leaving directory '/byte-unixbench/UnixBench'
+
+   #    #  #    #  #  #    #          #####   ######  #    #   ####   #    #
+   #    #  ##   #  #   #  #           #    #  #       ##   #  #    #  #    #
+   #    #  # #  #  #    ##            #####   #####   # #  #  #       ######
+   #    #  #  # #  #    ##            #    #  #       #  # #  #       #    #
+   #    #  #   ##  #   #  #           #    #  #       #   ##  #    #  #    #
+    ####   #    #  #  #    #          #####   ######  #    #   ####   #    #
+
+   Version 5.1.3                      Based on the Byte Magazine Unix Benchmark
+
+   Multi-CPU version                  Version 5 revisions by Ian Smith,
+                                      Sunnyvale, CA, USA
+   January 13, 2011                   johantheghost at yahoo period com
+
+------------------------------------------------------------------------------
+   Use directories for:
+      * File I/O tests (named fs***) = /byte-unixbench/UnixBench/tmp
+      * Results                      = /byte-unixbench/UnixBench/results
+------------------------------------------------------------------------------
+
+
+Tests to run: syscall
+Run with 1 copy
+
+1 x System Call Overhead  1
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/5563b43e5e31-2022-03-24-01.log""
+COPIES: "1"
+ 2
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/5563b43e5e31-2022-03-24-01.log""
+COPIES: "1"
+ 3
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/5563b43e5e31-2022-03-24-01.log""
+COPIES: "1"
+ 4
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/5563b43e5e31-2022-03-24-01.log""
+COPIES: "1"
+ 5
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/5563b43e5e31-2022-03-24-01.log""
+COPIES: "1"
+ 6
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/5563b43e5e31-2022-03-24-01.log""
+COPIES: "1"
+ 7
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/5563b43e5e31-2022-03-24-01.log""
+COPIES: "1"
+ 8
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/5563b43e5e31-2022-03-24-01.log""
+COPIES: "1"
+ 9
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/5563b43e5e31-2022-03-24-01.log""
+COPIES: "1"
+ 10
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/5563b43e5e31-2022-03-24-01.log""
+COPIES: "1"
+
+
+========================================================================
+   BYTE UNIX Benchmarks (Version 5.1.3)
+
+   System: 5563b43e5e31: GNU/Linux
+   OS: GNU/Linux -- 5.4.60 -- #1 SMP Sat Jan 16 02:51:23 UTC 2021
+   Machine: x86_64 (x86_64)
+   Language: en_US.utf8 (charmap="ANSI_X3.4-1968", collate="ANSI_X3.4-1968")
+   CPU 0: Intel(R) Xeon(R) Processor @ 1.10GHz (3024.0 bogomips)
+          x86-64, MMX, Physical Address Ext, SYSENTER/SYSEXIT, SYSCALL/SYSRET, Intel virtualization
+   04:35:00 up 0 min,  0 users,  load average: 0.00, 0.00, 0.00; runlevel 
+
+------------------------------------------------------------------------
+Benchmark Run: Thu Mar 24 2022 04:35:00 - 04:37:10
+1 CPU in system; running 1 parallel copy of tests
+
+System Call Overhead                         375358.4 lps   (10.0 s, 7 samples)
+
+System Benchmarks Partial Index              BASELINE       RESULT    INDEX
+System Call Overhead                          15000.0     375358.4    250.2
+                                                                   ========
+System Benchmarks Index Score (Partial Only)                          250.2
+
+make all
+make[1]: Entering directory '/byte-unixbench/UnixBench'
+make distr
+make[2]: Entering directory '/byte-unixbench/UnixBench'
+Checking distribution of files
+./pgms  exists
+./src  exists
+./testdir  exists
+./tmp  exists
+./results  exists
+make[2]: Leaving directory '/byte-unixbench/UnixBench'
+make programs
+make[2]: Entering directory '/byte-unixbench/UnixBench'
+make[2]: Nothing to be done for 'programs'.
+make[2]: Leaving directory '/byte-unixbench/UnixBench'
+make[1]: Leaving directory '/byte-unixbench/UnixBench'
+
+   #    #  #    #  #  #    #          #####   ######  #    #   ####   #    #
+   #    #  ##   #  #   #  #           #    #  #       ##   #  #    #  #    #
+   #    #  # #  #  #    ##            #####   #####   # #  #  #       ######
+   #    #  #  # #  #    ##            #    #  #       #  # #  #       #    #
+   #    #  #   ##  #   #  #           #    #  #       #   ##  #    #  #    #
+    ####   #    #  #  #    #          #####   ######  #    #   ####   #    #
+
+   Version 5.1.3                      Based on the Byte Magazine Unix Benchmark
+
+   Multi-CPU version                  Version 5 revisions by Ian Smith,
+                                      Sunnyvale, CA, USA
+   January 13, 2011                   johantheghost at yahoo period com
+
+------------------------------------------------------------------------------
+   Use directories for:
+      * File I/O tests (named fs***) = /byte-unixbench/UnixBench/tmp
+      * Results                      = /byte-unixbench/UnixBench/results
+------------------------------------------------------------------------------
+
+
+Tests to run: syscall
+Run with 1 copy
+
+1 x System Call Overhead  1
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/3cd1646e447a-2022-03-24-01.log""
+COPIES: "1"
+ 2
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/3cd1646e447a-2022-03-24-01.log""
+COPIES: "1"
+ 3
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/3cd1646e447a-2022-03-24-01.log""
+COPIES: "1"
+ 4
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/3cd1646e447a-2022-03-24-01.log""
+COPIES: "1"
+ 5
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/3cd1646e447a-2022-03-24-01.log""
+COPIES: "1"
+ 6
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/3cd1646e447a-2022-03-24-01.log""
+COPIES: "1"
+ 7
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/3cd1646e447a-2022-03-24-01.log""
+COPIES: "1"
+ 8
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/3cd1646e447a-2022-03-24-01.log""
+COPIES: "1"
+ 9
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/3cd1646e447a-2022-03-24-01.log""
+COPIES: "1"
+ 10
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/3cd1646e447a-2022-03-24-01.log""
+COPIES: "1"
+
+
+========================================================================
+   BYTE UNIX Benchmarks (Version 5.1.3)
+
+   System: 3cd1646e447a: GNU/Linux
+   OS: GNU/Linux -- 5.4.60 -- #1 SMP Sat Jan 16 02:51:23 UTC 2021
+   Machine: x86_64 (x86_64)
+   Language: en_US.utf8 (charmap="ANSI_X3.4-1968", collate="ANSI_X3.4-1968")
+   CPU 0: Intel(R) Xeon(R) Processor @ 1.10GHz (3024.0 bogomips)
+          x86-64, MMX, Physical Address Ext, SYSENTER/SYSEXIT, SYSCALL/SYSRET, Intel virtualization
+   04:37:16 up 0 min,  0 users,  load average: 0.00, 0.00, 0.00; runlevel 
+
+------------------------------------------------------------------------
+Benchmark Run: Thu Mar 24 2022 04:37:16 - 04:39:26
+1 CPU in system; running 1 parallel copy of tests
+
+System Call Overhead                         375587.4 lps   (10.0 s, 7 samples)
+
+System Benchmarks Partial Index              BASELINE       RESULT    INDEX
+System Call Overhead                          15000.0     375587.4    250.4
+                                                                   ========
+System Benchmarks Index Score (Partial Only)                          250.4
+
+make all
+make[1]: Entering directory '/byte-unixbench/UnixBench'
+make distr
+make[2]: Entering directory '/byte-unixbench/UnixBench'
+Checking distribution of files
+./pgms  exists
+./src  exists
+./testdir  exists
+./tmp  exists
+./results  exists
+make[2]: Leaving directory '/byte-unixbench/UnixBench'
+make programs
+make[2]: Entering directory '/byte-unixbench/UnixBench'
+make[2]: Nothing to be done for 'programs'.
+make[2]: Leaving directory '/byte-unixbench/UnixBench'
+make[1]: Leaving directory '/byte-unixbench/UnixBench'
+
+   #    #  #    #  #  #    #          #####   ######  #    #   ####   #    #
+   #    #  ##   #  #   #  #           #    #  #       ##   #  #    #  #    #
+   #    #  # #  #  #    ##            #####   #####   # #  #  #       ######
+   #    #  #  # #  #    ##            #    #  #       #  # #  #       #    #
+   #    #  #   ##  #   #  #           #    #  #       #   ##  #    #  #    #
+    ####   #    #  #  #    #          #####   ######  #    #   ####   #    #
+
+   Version 5.1.3                      Based on the Byte Magazine Unix Benchmark
+
+   Multi-CPU version                  Version 5 revisions by Ian Smith,
+                                      Sunnyvale, CA, USA
+   January 13, 2011                   johantheghost at yahoo period com
+
+------------------------------------------------------------------------------
+   Use directories for:
+      * File I/O tests (named fs***) = /byte-unixbench/UnixBench/tmp
+      * Results                      = /byte-unixbench/UnixBench/results
+------------------------------------------------------------------------------
+
+
+Tests to run: syscall
+Run with 1 copy
+
+1 x System Call Overhead  1
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/4a476c9d6833-2022-03-24-01.log""
+COPIES: "1"
+ 2
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/4a476c9d6833-2022-03-24-01.log""
+COPIES: "1"
+ 3
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/4a476c9d6833-2022-03-24-01.log""
+COPIES: "1"
+ 4
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/4a476c9d6833-2022-03-24-01.log""
+COPIES: "1"
+ 5
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/4a476c9d6833-2022-03-24-01.log""
+COPIES: "1"
+ 6
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/4a476c9d6833-2022-03-24-01.log""
+COPIES: "1"
+ 7
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/4a476c9d6833-2022-03-24-01.log""
+COPIES: "1"
+ 8
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/4a476c9d6833-2022-03-24-01.log""
+COPIES: "1"
+ 9
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/4a476c9d6833-2022-03-24-01.log""
+COPIES: "1"
+ 10
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/4a476c9d6833-2022-03-24-01.log""
+COPIES: "1"
+
+
+========================================================================
+   BYTE UNIX Benchmarks (Version 5.1.3)
+
+   System: 4a476c9d6833: GNU/Linux
+   OS: GNU/Linux -- 5.4.60 -- #1 SMP Sat Jan 16 02:51:23 UTC 2021
+   Machine: x86_64 (x86_64)
+   Language: en_US.utf8 (charmap="ANSI_X3.4-1968", collate="ANSI_X3.4-1968")
+   CPU 0: Intel(R) Xeon(R) Processor @ 1.10GHz (3024.0 bogomips)
+          x86-64, MMX, Physical Address Ext, SYSENTER/SYSEXIT, SYSCALL/SYSRET, Intel virtualization
+   04:39:33 up 0 min,  0 users,  load average: 0.00, 0.00, 0.00; runlevel 
+
+------------------------------------------------------------------------
+Benchmark Run: Thu Mar 24 2022 04:39:33 - 04:41:43
+1 CPU in system; running 1 parallel copy of tests
+
+System Call Overhead                         372307.4 lps   (10.0 s, 7 samples)
+
+System Benchmarks Partial Index              BASELINE       RESULT    INDEX
+System Call Overhead                          15000.0     372307.4    248.2
+                                                                   ========
+System Benchmarks Index Score (Partial Only)                          248.2
+
+make all
+make[1]: Entering directory '/byte-unixbench/UnixBench'
+make distr
+make[2]: Entering directory '/byte-unixbench/UnixBench'
+Checking distribution of files
+./pgms  exists
+./src  exists
+./testdir  exists
+./tmp  exists
+./results  exists
+make[2]: Leaving directory '/byte-unixbench/UnixBench'
+make programs
+make[2]: Entering directory '/byte-unixbench/UnixBench'
+make[2]: Nothing to be done for 'programs'.
+make[2]: Leaving directory '/byte-unixbench/UnixBench'
+make[1]: Leaving directory '/byte-unixbench/UnixBench'
+
+   #    #  #    #  #  #    #          #####   ######  #    #   ####   #    #
+   #    #  ##   #  #   #  #           #    #  #       ##   #  #    #  #    #
+   #    #  # #  #  #    ##            #####   #####   # #  #  #       ######
+   #    #  #  # #  #    ##            #    #  #       #  # #  #       #    #
+   #    #  #   ##  #   #  #           #    #  #       #   ##  #    #  #    #
+    ####   #    #  #  #    #          #####   ######  #    #   ####   #    #
+
+   Version 5.1.3                      Based on the Byte Magazine Unix Benchmark
+
+   Multi-CPU version                  Version 5 revisions by Ian Smith,
+                                      Sunnyvale, CA, USA
+   January 13, 2011                   johantheghost at yahoo period com
+
+------------------------------------------------------------------------------
+   Use directories for:
+      * File I/O tests (named fs***) = /byte-unixbench/UnixBench/tmp
+      * Results                      = /byte-unixbench/UnixBench/results
+------------------------------------------------------------------------------
+
+
+Tests to run: syscall
+Run with 1 copy
+
+1 x System Call Overhead  1
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/0e410c2a470f-2022-03-24-01.log""
+COPIES: "1"
+ 2
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/0e410c2a470f-2022-03-24-01.log""
+COPIES: "1"
+ 3
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/0e410c2a470f-2022-03-24-01.log""
+COPIES: "1"
+ 4
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/0e410c2a470f-2022-03-24-01.log""
+COPIES: "1"
+ 5
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/0e410c2a470f-2022-03-24-01.log""
+COPIES: "1"
+ 6
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/0e410c2a470f-2022-03-24-01.log""
+COPIES: "1"
+ 7
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/0e410c2a470f-2022-03-24-01.log""
+COPIES: "1"
+ 8
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/0e410c2a470f-2022-03-24-01.log""
+COPIES: "1"
+ 9
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/0e410c2a470f-2022-03-24-01.log""
+COPIES: "1"
+ 10
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/0e410c2a470f-2022-03-24-01.log""
+COPIES: "1"
+
+
+========================================================================
+   BYTE UNIX Benchmarks (Version 5.1.3)
+
+   System: 0e410c2a470f: GNU/Linux
+   OS: GNU/Linux -- 5.4.60 -- #1 SMP Sat Jan 16 02:51:23 UTC 2021
+   Machine: x86_64 (x86_64)
+   Language: en_US.utf8 (charmap="ANSI_X3.4-1968", collate="ANSI_X3.4-1968")
+   CPU 0: Intel(R) Xeon(R) Processor @ 1.10GHz (3024.0 bogomips)
+          x86-64, MMX, Physical Address Ext, SYSENTER/SYSEXIT, SYSCALL/SYSRET, Intel virtualization
+   04:41:49 up 0 min,  0 users,  load average: 0.00, 0.00, 0.00; runlevel 
+
+------------------------------------------------------------------------
+Benchmark Run: Thu Mar 24 2022 04:41:49 - 04:43:59
+1 CPU in system; running 1 parallel copy of tests
+
+System Call Overhead                         371799.4 lps   (10.0 s, 7 samples)
+
+System Benchmarks Partial Index              BASELINE       RESULT    INDEX
+System Call Overhead                          15000.0     371799.4    247.9
+                                                                   ========
+System Benchmarks Index Score (Partial Only)                          247.9
+
+make all
+make[1]: Entering directory '/byte-unixbench/UnixBench'
+make distr
+make[2]: Entering directory '/byte-unixbench/UnixBench'
+Checking distribution of files
+./pgms  exists
+./src  exists
+./testdir  exists
+./tmp  exists
+./results  exists
+make[2]: Leaving directory '/byte-unixbench/UnixBench'
+make programs
+make[2]: Entering directory '/byte-unixbench/UnixBench'
+make[2]: Nothing to be done for 'programs'.
+make[2]: Leaving directory '/byte-unixbench/UnixBench'
+make[1]: Leaving directory '/byte-unixbench/UnixBench'
+
+   #    #  #    #  #  #    #          #####   ######  #    #   ####   #    #
+   #    #  ##   #  #   #  #           #    #  #       ##   #  #    #  #    #
+   #    #  # #  #  #    ##            #####   #####   # #  #  #       ######
+   #    #  #  # #  #    ##            #    #  #       #  # #  #       #    #
+   #    #  #   ##  #   #  #           #    #  #       #   ##  #    #  #    #
+    ####   #    #  #  #    #          #####   ######  #    #   ####   #    #
+
+   Version 5.1.3                      Based on the Byte Magazine Unix Benchmark
+
+   Multi-CPU version                  Version 5 revisions by Ian Smith,
+                                      Sunnyvale, CA, USA
+   January 13, 2011                   johantheghost at yahoo period com
+
+------------------------------------------------------------------------------
+   Use directories for:
+      * File I/O tests (named fs***) = /byte-unixbench/UnixBench/tmp
+      * Results                      = /byte-unixbench/UnixBench/results
+------------------------------------------------------------------------------
+
+
+Tests to run: syscall
+Run with 1 copy
+
+1 x System Call Overhead  1
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/b94b81c53c67-2022-03-24-01.log""
+COPIES: "1"
+ 2
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/b94b81c53c67-2022-03-24-01.log""
+COPIES: "1"
+ 3
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/b94b81c53c67-2022-03-24-01.log""
+COPIES: "1"
+ 4
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/b94b81c53c67-2022-03-24-01.log""
+COPIES: "1"
+ 5
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/b94b81c53c67-2022-03-24-01.log""
+COPIES: "1"
+ 6
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/b94b81c53c67-2022-03-24-01.log""
+COPIES: "1"
+ 7
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/b94b81c53c67-2022-03-24-01.log""
+COPIES: "1"
+ 8
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/b94b81c53c67-2022-03-24-01.log""
+COPIES: "1"
+ 9
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/b94b81c53c67-2022-03-24-01.log""
+COPIES: "1"
+ 10
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/b94b81c53c67-2022-03-24-01.log""
+COPIES: "1"
+
+
+========================================================================
+   BYTE UNIX Benchmarks (Version 5.1.3)
+
+   System: b94b81c53c67: GNU/Linux
+   OS: GNU/Linux -- 5.4.60 -- #1 SMP Sat Jan 16 02:51:23 UTC 2021
+   Machine: x86_64 (x86_64)
+   Language: en_US.utf8 (charmap="ANSI_X3.4-1968", collate="ANSI_X3.4-1968")
+   CPU 0: Intel(R) Xeon(R) Processor @ 1.10GHz (3024.0 bogomips)
+          x86-64, MMX, Physical Address Ext, SYSENTER/SYSEXIT, SYSCALL/SYSRET, Intel virtualization
+   04:44:05 up 0 min,  0 users,  load average: 0.00, 0.00, 0.00; runlevel 
+
+------------------------------------------------------------------------
+Benchmark Run: Thu Mar 24 2022 04:44:05 - 04:46:15
+1 CPU in system; running 1 parallel copy of tests
+
+System Call Overhead                         372786.9 lps   (10.0 s, 7 samples)
+
+System Benchmarks Partial Index              BASELINE       RESULT    INDEX
+System Call Overhead                          15000.0     372786.9    248.5
+                                                                   ========
+System Benchmarks Index Score (Partial Only)                          248.5
+
+make all
+make[1]: Entering directory '/byte-unixbench/UnixBench'
+make distr
+make[2]: Entering directory '/byte-unixbench/UnixBench'
+Checking distribution of files
+./pgms  exists
+./src  exists
+./testdir  exists
+./tmp  exists
+./results  exists
+make[2]: Leaving directory '/byte-unixbench/UnixBench'
+make programs
+make[2]: Entering directory '/byte-unixbench/UnixBench'
+make[2]: Nothing to be done for 'programs'.
+make[2]: Leaving directory '/byte-unixbench/UnixBench'
+make[1]: Leaving directory '/byte-unixbench/UnixBench'
+
+   #    #  #    #  #  #    #          #####   ######  #    #   ####   #    #
+   #    #  ##   #  #   #  #           #    #  #       ##   #  #    #  #    #
+   #    #  # #  #  #    ##            #####   #####   # #  #  #       ######
+   #    #  #  # #  #    ##            #    #  #       #  # #  #       #    #
+   #    #  #   ##  #   #  #           #    #  #       #   ##  #    #  #    #
+    ####   #    #  #  #    #          #####   ######  #    #   ####   #    #
+
+   Version 5.1.3                      Based on the Byte Magazine Unix Benchmark
+
+   Multi-CPU version                  Version 5 revisions by Ian Smith,
+                                      Sunnyvale, CA, USA
+   January 13, 2011                   johantheghost at yahoo period com
+
+------------------------------------------------------------------------------
+   Use directories for:
+      * File I/O tests (named fs***) = /byte-unixbench/UnixBench/tmp
+      * Results                      = /byte-unixbench/UnixBench/results
+------------------------------------------------------------------------------
+
+
+Tests to run: syscall
+Run with 1 copy
+
+1 x System Call Overhead  1
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/6ae4c43aefd6-2022-03-24-01.log""
+COPIES: "1"
+ 2
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/6ae4c43aefd6-2022-03-24-01.log""
+COPIES: "1"
+ 3
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/6ae4c43aefd6-2022-03-24-01.log""
+COPIES: "1"
+ 4
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/6ae4c43aefd6-2022-03-24-01.log""
+COPIES: "1"
+ 5
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/6ae4c43aefd6-2022-03-24-01.log""
+COPIES: "1"
+ 6
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/6ae4c43aefd6-2022-03-24-01.log""
+COPIES: "1"
+ 7
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/6ae4c43aefd6-2022-03-24-01.log""
+COPIES: "1"
+ 8
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/6ae4c43aefd6-2022-03-24-01.log""
+COPIES: "1"
+ 9
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/6ae4c43aefd6-2022-03-24-01.log""
+COPIES: "1"
+ 10
+COMMAND: ""/byte-unixbench/UnixBench/pgms/syscall" 10 2>&1 >> "/byte-unixbench/UnixBench/results/6ae4c43aefd6-2022-03-24-01.log""
+COPIES: "1"
+
+
+========================================================================
+   BYTE UNIX Benchmarks (Version 5.1.3)
+
+   System: 6ae4c43aefd6: GNU/Linux
+   OS: GNU/Linux -- 5.4.60 -- #1 SMP Sat Jan 16 02:51:23 UTC 2021
+   Machine: x86_64 (x86_64)
+   Language: en_US.utf8 (charmap="ANSI_X3.4-1968", collate="ANSI_X3.4-1968")
+   CPU 0: Intel(R) Xeon(R) Processor @ 1.10GHz (3024.0 bogomips)
+          x86-64, MMX, Physical Address Ext, SYSENTER/SYSEXIT, SYSCALL/SYSRET, Intel virtualization
+   04:46:21 up 0 min,  0 users,  load average: 0.00, 0.00, 0.00; runlevel 
+
+------------------------------------------------------------------------
+Benchmark Run: Thu Mar 24 2022 04:46:21 - 04:48:32
+1 CPU in system; running 1 parallel copy of tests
+
+System Call Overhead                         375716.3 lps   (10.0 s, 7 samples)
+
+System Benchmarks Partial Index              BASELINE       RESULT    INDEX
+System Call Overhead                          15000.0     375716.3    250.5
+                                                                   ========
+System Benchmarks Index Score (Partial Only)                          250.5
+

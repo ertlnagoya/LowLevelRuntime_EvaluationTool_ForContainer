@@ -77,6 +77,16 @@ for ((i = 0; i < ${#low_level_runtime[@]}; i++)) {
             sleep ${sleep_time}   
         }
         docker rm -f ${low_level_runtime[i]} > /dev/null
+    elif [ "$1" = "syscall_collect" ]; then #システムコールの取得処理
+        gnome-terminal -- bash -c "sudo sysdig -w $1/${low_level_runtime[i]}.scap container.name=${low_level_runtime[i]};"
+        echo ${container_image}
+        docker run -it --runtime=${low_level_runtime[i]} --name=${low_level_runtime[i]} ${container_image} > /dev/null
+        wait $!
+        sudo pkill sysdig
+        docker rm -f ${low_level_runtime[i]} > /dev/null
+        sysdig -r $1/${low_level_runtime[i]}.scap -p"%evt.type" > $1/${low_level_runtime[i]}.txt
+        sort $1/${low_level_runtime[i]}.txt | uniq -c | sort -r > $1/${low_level_runtime[i]}_sort.txt
+        wait $!
     else
         for ((j = 0; j < ${container_num}; j++)) {
             docker run --runtime=${low_level_runtime[i]} --name=${low_level_runtime[i]}$j ${container_image} >> "$1"/${low_level_runtime[i]}.txt 2>> "$1"/err_war.txt
