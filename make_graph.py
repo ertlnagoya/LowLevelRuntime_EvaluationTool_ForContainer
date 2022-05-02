@@ -197,14 +197,15 @@ elif(benchmark == "resource_cpu" or benchmark == "resource_memory"):
     plt.savefig(benchmark+"/"+y_label+".png")
     plt.show()
 elif(benchmark == "syscall_collect"):
-    fig = plt.figure()
     x_line = np.linspace(1,len(low_level_runtime),len(low_level_runtime))
     Top_num = 5 #ここで上位何個のシステムコールを表示させるかを指定する
     for i in range(len(low_level_runtime)):
+        fig = plt.figure()
         syscall_dict = {}
         edit_data_syscall_collect(low_level_runtime[i],benchmark+"/"+low_level_runtime[i]+"_sort.txt",syscall_dict,Top_num)
-        plt.pie(syscall_dict.values(),labels=syscall_dict.keys(),startangle=90,autopct="%1.1f%%")
+        plt.pie(syscall_dict.values(),counterclock=False,startangle=90,autopct="%1.1f%%")
         plt.xlabel(low_level_runtime[i] + " Top " + str(Top_num) + " syscall")
+        fig.legend(labels=syscall_dict.keys(),loc='upper center',ncol=4)
         plt.savefig(benchmark+"/"+ low_level_runtime[i] +"_Syscall_Collect.png")
         plt.show()
 else:

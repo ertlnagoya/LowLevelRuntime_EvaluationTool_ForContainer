@@ -1,8 +1,28 @@
-    238 switch
-     32 write
+    562 switch
+    116 mmap
+     48 write
+     40 mprotect
+     26 close
+     24 read
+     24 openat
+     24 fstat
+     16 pread
+     12 futex
+      6 rt_sigaction
+      6 brk
+      4 set_robust_list
+      4 arch_prctl
+      3 clone
+      2 set_tid_address
+      2 rt_sigprocmask
       2 procexit
+      2 prlimit
+      2 munmap
       2 madvise
+      2 execve
       2 alarm
-      1 futex
+      2 access
+      1 select
       1 exit_group
       1 exit
+      1 container
