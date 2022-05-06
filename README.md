@@ -23,6 +23,7 @@
 # Requirement
 以下の全てのコマンドが使用できることを確認して下さい。  
 package_install.shを実行することで以下のコマンドを使用できるようになります。  
+ただし、journalctlと低レベルランタイムに関しては以下の記述を読んで、各自で設定を行ってください。  
 ### docker  
 [リンク先](https://matsuand.github.io/docs.docker.jp.onthefly/engine/install/ubuntu/)を参考にDockerをインストールして下さい。  
 インストール後に、sudo権限なしでdockerコマンドを実行できるように変更して下さい。  
