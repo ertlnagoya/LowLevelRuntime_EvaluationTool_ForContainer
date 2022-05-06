@@ -22,6 +22,7 @@
 
 # Requirement
 以下の全てのコマンドが使用できることを確認して下さい。  
+package_install.shを実行することで以下のコマンドを使用できるようになります。  
 ### docker  
 [リンク先](https://matsuand.github.io/docs.docker.jp.onthefly/engine/install/ubuntu/)を参考にDockerをインストールして下さい。  
 インストール後に、sudo権限なしでdockerコマンドを実行できるように変更して下さい。  
@@ -41,6 +42,11 @@ $ sudo apt install -y procps
 ### iperf  
 ```bash
 $ sudo apt install -y iperf
+```
+### sysdig  
+```bash
+$ sudo apt install -y sysdig
+$ echo ""$(whoami)" ALL=NOPASSWD:/usr/bin/sysdig,/usr/bin/pkill" | sudo EDITOR='tee -a' visudo
 ```
 ### python3 (+pip3,numpy,matplotlib)  
 ```bash
