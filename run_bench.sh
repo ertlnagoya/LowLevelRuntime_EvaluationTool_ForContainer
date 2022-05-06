@@ -2,7 +2,11 @@
 
 #メイン処理
 
+#処理に時間がかかるgVisorやKataの調整用時間
 sleep_time=3
+#コンテナが起動し続ける場合に強制的にrmするまでの時間
+continue_time=60
+
 
 rm -f "$1"/err_war.txt
 for ((i = 0; i < ${#low_level_runtime[@]}; i++)) {
@@ -80,8 +84,8 @@ for ((i = 0; i < ${#low_level_runtime[@]}; i++)) {
     elif [ "$1" = "syscall_collect" ]; then #システムコールの取得処理
         gnome-terminal -- bash -c "sudo sysdig -w $1/${low_level_runtime[i]}.scap container.name=${low_level_runtime[i]};"
         echo ${container_image}
-        docker run -it --runtime=${low_level_runtime[i]} --name=${low_level_runtime[i]} ${container_image} > /dev/null
-        wait $!
+        timeout ${continue_time} docker run -it --runtime=${low_level_runtime[i]} --name=${low_level_runtime[i]} ${container_image} > /dev/null
+        wait $!     
         sudo pkill sysdig
         docker rm -f ${low_level_runtime[i]} > /dev/null
         sysdig -r $1/${low_level_runtime[i]}.scap -p"%evt.type" > $1/${low_level_runtime[i]}.txt
