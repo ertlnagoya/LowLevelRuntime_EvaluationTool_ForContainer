@@ -4,7 +4,7 @@
 グラフとログは実行した項目のディレクトリ下に生成されます。
 
 # Features
-合計12種類のベンチマークを用意しました。  
+合計13種類のベンチマークを用意しました。  
 ### コンテナ内部の処理性能
 * cpu  
 * memory
@@ -19,6 +19,7 @@
 * resource_cpu
 * resource_memory
 * resource_storage
+* syscall_collect
 
 # Requirement
 以下の全てのコマンドが使用できることを確認して下さい。  
