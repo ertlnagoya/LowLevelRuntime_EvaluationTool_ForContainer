@@ -118,7 +118,7 @@ $ sudo vi /etc/docker/daemon.json
 ```
 
 # Usage
-### cpuベンチマークを実行する場合 
+### コンテナ内部の処理性能のベンチマークを実行する場合(例：cpu) 
 cpuディレクトリのcpu.shに、評価対象とする低レベルランタイム（以下の例はcrun、runsc）を記入します。
 ```bash
 declare -a low_level_runtime=("crun" "runsc")
@@ -126,6 +126,15 @@ declare -a low_level_runtime=("crun" "runsc")
 引数としてcpu項目を指定し、start_bench.shを実行します。
 ```bash
 $ source start_bench.sh cpu
+```
+### コンテナがホストで使用するリソースを計測する場合(例：syscall_collect) 
+syscall_collectディレクトリのsyscall_collect.shに、評価対象とする低レベルランタイム（以下の例はcrun、runsc）を記入します。
+```bash
+declare -a low_level_runtime=("crun" "runsc")
+```
+引数としてsyscall_collect項目とコンテナイメージ(+コマンド)を指定し、start_bench.shを実行します。
+```bash
+$ source start_bench.sh syscall_collect "paipoi/sysbench_"$(uname -p)" sysbench --test=cpu --cpu-max-prime=20000 --num-threads=1 run"
 ```
 
 # Note
