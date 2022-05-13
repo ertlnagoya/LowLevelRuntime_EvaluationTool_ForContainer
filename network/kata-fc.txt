@@ -1,70 +1,70 @@
 ------------------------------------------------------------
 Client connecting to 172.17.0.2, TCP port 5001
-TCP window size: 2.31 MByte (default)
+TCP window size: 0.37 MByte (default)
 ------------------------------------------------------------
-[  3] local 172.17.0.1 port 54742 connected with 172.17.0.2 port 5001
+[  3] local 172.17.0.1 port 42700 connected with 172.17.0.2 port 5001
 [ ID] Interval       Transfer     Bandwidth
-[  3]  0.0-10.0 sec  17531 MBytes  1753 MBytes/sec
+[  3]  0.0-10.0 sec  17586 MBytes  1758 MBytes/sec
 ------------------------------------------------------------
 Client connecting to 172.17.0.2, TCP port 5001
-TCP window size: 3.45 MByte (default)
+TCP window size: 4.00 MByte (default)
 ------------------------------------------------------------
-[  3] local 172.17.0.1 port 54744 connected with 172.17.0.2 port 5001
+[  3] local 172.17.0.1 port 42702 connected with 172.17.0.2 port 5001
 [ ID] Interval       Transfer     Bandwidth
-[  3]  0.0-10.0 sec  16448 MBytes  1645 MBytes/sec
+[  3]  0.0-10.0 sec  16252 MBytes  1625 MBytes/sec
 ------------------------------------------------------------
 Client connecting to 172.17.0.2, TCP port 5001
 TCP window size: 0.35 MByte (default)
 ------------------------------------------------------------
-[  3] local 172.17.0.1 port 54746 connected with 172.17.0.2 port 5001
+[  3] local 172.17.0.1 port 42704 connected with 172.17.0.2 port 5001
 [ ID] Interval       Transfer     Bandwidth
-[  3]  0.0-10.0 sec  16594 MBytes  1659 MBytes/sec
+[  3]  0.0-10.0 sec  16657 MBytes  1666 MBytes/sec
 ------------------------------------------------------------
 Client connecting to 172.17.0.2, TCP port 5001
-TCP window size: 0.77 MByte (default)
+TCP window size: 0.41 MByte (default)
 ------------------------------------------------------------
-[  3] local 172.17.0.1 port 54748 connected with 172.17.0.2 port 5001
+[  3] local 172.17.0.1 port 42706 connected with 172.17.0.2 port 5001
 [ ID] Interval       Transfer     Bandwidth
-[  3]  0.0-10.0 sec  16686 MBytes  1669 MBytes/sec
+[  3]  0.0-10.0 sec  16643 MBytes  1664 MBytes/sec
 ------------------------------------------------------------
 Client connecting to 172.17.0.2, TCP port 5001
-TCP window size: 0.55 MByte (default)
+TCP window size: 0.59 MByte (default)
 ------------------------------------------------------------
-[  3] local 172.17.0.1 port 54750 connected with 172.17.0.2 port 5001
+[  3] local 172.17.0.1 port 42708 connected with 172.17.0.2 port 5001
 [ ID] Interval       Transfer     Bandwidth
-[  3]  0.0-10.0 sec  16673 MBytes  1667 MBytes/sec
+[  3]  0.0-10.0 sec  16668 MBytes  1667 MBytes/sec
 ------------------------------------------------------------
 Client connecting to 172.17.0.2, TCP port 5001
-TCP window size: 0.66 MByte (default)
+TCP window size: 1.69 MByte (default)
 ------------------------------------------------------------
-[  3] local 172.17.0.1 port 54752 connected with 172.17.0.2 port 5001
+[  3] local 172.17.0.1 port 42712 connected with 172.17.0.2 port 5001
 [ ID] Interval       Transfer     Bandwidth
-[  3]  0.0-10.0 sec  16695 MBytes  1670 MBytes/sec
+[  3]  0.0-10.0 sec  16700 MBytes  1670 MBytes/sec
 ------------------------------------------------------------
 Client connecting to 172.17.0.2, TCP port 5001
-TCP window size: 2.62 MByte (default)
+TCP window size: 3.00 MByte (default)
 ------------------------------------------------------------
-[  3] local 172.17.0.1 port 54754 connected with 172.17.0.2 port 5001
+[  3] local 172.17.0.1 port 42714 connected with 172.17.0.2 port 5001
 [ ID] Interval       Transfer     Bandwidth
-[  3]  0.0-10.0 sec  16667 MBytes  1667 MBytes/sec
+[  3]  0.0-10.0 sec  16263 MBytes  1626 MBytes/sec
 ------------------------------------------------------------
 Client connecting to 172.17.0.2, TCP port 5001
-TCP window size: 0.54 MByte (default)
+TCP window size: 2.27 MByte (default)
 ------------------------------------------------------------
-[  3] local 172.17.0.1 port 54756 connected with 172.17.0.2 port 5001
+[  3] local 172.17.0.1 port 42716 connected with 172.17.0.2 port 5001
 [ ID] Interval       Transfer     Bandwidth
-[  3]  0.0-10.0 sec  16716 MBytes  1672 MBytes/sec
+[  3]  0.0-10.0 sec  16334 MBytes  1633 MBytes/sec
 ------------------------------------------------------------
 Client connecting to 172.17.0.2, TCP port 5001
-TCP window size: 1.80 MByte (default)
+TCP window size: 0.83 MByte (default)
 ------------------------------------------------------------
-[  3] local 172.17.0.1 port 54758 connected with 172.17.0.2 port 5001
+[  3] local 172.17.0.1 port 42718 connected with 172.17.0.2 port 5001
 [ ID] Interval       Transfer     Bandwidth
-[  3]  0.0-10.0 sec  16418 MBytes  1642 MBytes/sec
+[  3]  0.0-10.0 sec  16363 MBytes  1636 MBytes/sec
 ------------------------------------------------------------
 Client connecting to 172.17.0.2, TCP port 5001
-TCP window size: 1.28 MByte (default)
+TCP window size: 0.86 MByte (default)
 ------------------------------------------------------------
-[  3] local 172.17.0.1 port 54760 connected with 172.17.0.2 port 5001
+[  3] local 172.17.0.1 port 42720 connected with 172.17.0.2 port 5001
 [ ID] Interval       Transfer     Bandwidth
-[  3]  0.0-10.0 sec  16600 MBytes  1660 MBytes/sec
+[  3]  0.0-10.0 sec  16515 MBytes  1652 MBytes/sec

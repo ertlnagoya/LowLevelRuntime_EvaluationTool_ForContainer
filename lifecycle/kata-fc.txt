@@ -1,90 +1,18 @@
 1cycle
 create
-real 0.44
-user 0.02
+real 0.35
+user 0.08
 sys 0.02
 start
-real 1.24
-user 0.02
-sys 0.01
-stop
-real 1.03
-user 0.02
-sys 0.03
-remove
-real 0.47
-user 0.05
-sys 0.04
-
-2cycle
-create
-real 0.27
-user 0.03
-sys 0.01
-start
-real 1.26
-user 0.03
-sys 0.01
-stop
-real 1.00
-user 0.03
-sys 0.00
-remove
-real 0.40
-user 0.03
-sys 0.01
-
-3cycle
-create
-real 0.42
-user 0.03
-sys 0.00
-start
-real 1.31
-user 0.02
-sys 0.01
-stop
-real 0.91
-user 0.03
-sys 0.01
-remove
-real 0.40
-user 0.03
-sys 0.01
-
-4cycle
-create
-real 0.43
-user 0.03
-sys 0.00
-start
-real 1.26
-user 0.03
-sys 0.00
-stop
-real 0.94
-user 0.03
-sys 0.01
-remove
-real 0.40
-user 0.02
-sys 0.02
-
-5cycle
-create
-real 0.38
-user 0.02
-sys 0.01
-start
-real 1.40
+real 1.86
 user 0.02
 sys 0.02
 stop
-real 0.97
-user 0.02
-sys 0.01
-remove
-real 0.42
+real 1.01
 user 0.01
 sys 0.02
+remove
+real 0.44
+user 0.02
+sys 0.01
 

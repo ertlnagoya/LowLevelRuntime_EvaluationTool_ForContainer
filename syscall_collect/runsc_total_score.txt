@@ -1,0 +1,136 @@
+runsc
+
+syscall name : switch
+[]
+
+syscall name : futex
+[]
+
+syscall name : epoll_pwait
+[]
+
+syscall name : nanosleep
+[CVE-2009-2767 : 0.0322, ]
+
+syscall name : ptrace
+[CVE-2001-1390 : 0.01282, CVE-2001-1391 : 0.01282, CVE-2001-1392 : 0.01282, CVE-2001-1393 : 0.01282, CVE-2001-1394 : 0.01282, CVE-2001-1395 : 0.01282, CVE-2001-1396 : 0.01282, CVE-2001-1397 : 0.01282, CVE-2001-1398 : 0.01537, CVE-2001-1399 : 0.01282, CVE-2001-1400 : 0.01282, CVE-2017-15537 : 0.0095, CVE-2020-25221 : 0.01034, ]
+
+syscall name : wait4
+[]
+
+syscall name : sched_yield
+[]
+
+syscall name : mmap
+[CVE-2002-1380 : 0.02046, CVE-2002-1668 : 0.0089, CVE-2005-4811 : 0.01282, CVE-2010-5321 : 0.0095, CVE-2010-5329 : 0.0095, CVE-2013-2596 : 0.07834, CVE-2016-6522 : 0.0095, CVE-2016-7389 : 0.00885, CVE-2018-1000200 : 0.01282, CVE-2018-1120 : 0.01547, CVE-2019-15794 : 0.02042, ]
+
+syscall name : close
+[CVE-2017-3635 : 0.0095, CVE-2017-8246 : 0.00885, CVE-2018-14625 : 0.01547, CVE-2018-16840 : 0.01108, CVE-2019-13289 : 0.00885, CVE-2020-27820 : 0.0095, CVE-2021-4083 : 0.01034, ]
+
+syscall name : clock_gettime
+[]
+
+syscall name : write
+[CVE-2004-0346 : 0.0089, CVE-2004-2680 : 0.05242, CVE-2006-0585 : 0.13525, CVE-2007-1092 : 0.09915, CVE-2007-1094 : 0.13105, CVE-2007-1256 : 0.01213, CVE-2015-9224 : 0.00885, CVE-2016-4565 : 0.01547, CVE-2017-11075 : 0.00885, CVE-2017-3737 : 0.08715, CVE-2018-12115 : 0.01183, CVE-2018-14642 : 0.01537, CVE-2018-18955 : 0.13151, CVE-2019-16413 : 0.01018, CVE-2019-18812 : 0.01018, CVE-2019-19924 : 0.01742, CVE-2019-19926 : 0.01537, CVE-2019-20808 : 0.0089, CVE-2020-11869 : 0.0089, CVE-2020-12829 : 0.0089, CVE-2020-13253 : 0.01034, CVE-2020-13361 : 0.01282, CVE-2020-24352 : 0.0089, CVE-2020-27821 : 0.0089, CVE-2020-28371 : 0.00885, CVE-2022-1011 : 0.00885, ]
+
+syscall name : madvise
+[]
+
+syscall name : read
+[CVE-2010-3843 : 0.0089, CVE-2015-3214 : 0.07751, CVE-2016-5399 : 0.24044, CVE-2016-5828 : 0.01547, CVE-2017-13089 : 0.12262, CVE-2017-13090 : 0.01183, CVE-2017-13760 : 0.00885, CVE-2017-15896 : 0.00885, CVE-2017-16654 : 0.01018, CVE-2017-17054 : 0.00885, CVE-2017-3737 : 0.08715, CVE-2017-6307 : 0.01108, CVE-2017-7586 : 0.01108, CVE-2017-9108 : 0.01018, CVE-2017-9705 : 0.00885, CVE-2018-1000880 : 0.01537, CVE-2018-1120 : 0.01547, CVE-2018-18438 : 0.0095, CVE-2019-14842 : 0.0144, CVE-2019-16413 : 0.01018, CVE-2019-17526 : 0.00954, CVE-2019-18936 : 0.00885, CVE-2019-19698 : 0.00885, CVE-2019-3819 : 0.01282, CVE-2019-8379 : 0.01018, CVE-2020-36443 : 0.00885, CVE-2021-25383 : 0.01086, CVE-2021-30045 : 0.00954, CVE-2021-39574 : 0.01036, CVE-2021-40426 : 0.00885, CVE-2022-1441 : 0.00885, ]
+
+syscall name : munmap
+[CVE-2020-29369 : 0.01034, ]
+
+syscall name : openat
+[CVE-2016-8649 : 0.01034, ]
+
+syscall name : recvmmsg
+[]
+
+syscall name : signaldeliver
+[]
+
+syscall name : fstat
+[]
+
+syscall name : tgkill
+[]
+
+syscall name : getpid
+[]
+
+syscall name : procexit
+[]
+
+syscall name : ppoll
+[]
+
+syscall name : pread
+[CVE-2019-14842 : 0.0144, ]
+
+syscall name : fcntl
+[]
+
+syscall name : recvmsg
+[CVE-2008-2750 : 0.03779, CVE-2019-3837 : 0.00885, ]
+
+syscall name : sigreturn
+[CVE-2017-15537 : 0.0095, CVE-2019-13648 : 0.01547, ]
+
+syscall name : shutdown
+[CVE-2019-1559 : 0.06217, ]
+
+syscall name : sendmsg
+[CVE-2017-17712 : 0.01864, CVE-2018-1130 : 0.01547, CVE-2019-8956 : 0.0309, CVE-2021-3640 : 0.01282, ]
+
+syscall name : dup
+[CVE-2014-9116 : 0.03407, CVE-2017-13748 : 0.01319, CVE-2019-12382 : 0.01282, CVE-2019-20398 : 0.01018, ]
+
+syscall name : mprotect
+[]
+
+syscall name : readlinkat
+[]
+
+syscall name : clone
+[CVE-2018-19838 : 0.01018, CVE-2020-36452 : 0.00885, CVE-2021-28034 : 0.00885, CVE-2021-28035 : 0.00885, CVE-2021-29937 : 0.00885, ]
+
+syscall name : fallocate
+[]
+
+syscall name : rt_sigaction
+[]
+
+syscall name : exit_group
+[]
+
+syscall name : set_robust_list
+[]
+
+syscall name : brk
+[CVE-2003-0961 : 0.0322, ]
+
+syscall name : set_tid_address
+[]
+
+syscall name : rt_sigprocmask
+[]
+
+syscall name : prlimit
+[]
+
+syscall name : exit
+[CVE-2010-4258 : 0.06674, CVE-2019-19966 : 0.0095, ]
+
+syscall name : container
+[CVE-2021-28902 : 0.00885, ]
+
+syscall name : arch_prctl
+[]
+
+syscall name : alarm
+[]
+
+1937.2166800000002
+
