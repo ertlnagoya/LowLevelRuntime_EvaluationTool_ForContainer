@@ -83,7 +83,7 @@ githubからこのリポジトリをクローンして下さい。
 $ git clone https://github.com/ertlnagoya/Container_Eval_Tool_M1/
 ```
 ### 低レベルランタイム  
-デフォルトで[runc](https://github.com/opencontainers/runc)、[crun](https://github.com/containers/crun)、[runsc](https://gvisor.dev/docs/user_guide/install/)を使用するように設定しています。  
+[](デフォルトで[runc](https://github.com/opencontainers/runc)、[crun](https://github.com/containers/crun)、[runsc](https://gvisor.dev/docs/user_guide/install/)を使用するように設定しています。  )
 必要に応じて、評価したい低レベルランタイムをインストールして下さい。  
 インストール後、/etc/docker/daemon.jsonに低ベレルランタイムのリンク先を記入して下さい。  
 ただし、[runc](https://github.com/opencontainers/runc)は/etc/docker/daemon.jsonに記入せずとも、dockerをインストールした時点で使用できます。  
@@ -118,7 +118,7 @@ $ sudo vi /etc/docker/daemon.json
 ```
 
 # Usage
-### コンテナ内部の処理性能のベンチマークを実行する場合(例：cpu) 
+### コンテナ内部の処理性能を計測する場合(例：cpu) 
 cpuディレクトリのcpu.shに、評価対象とする低レベルランタイム（以下の例はcrun、runsc）を記入します。
 ```bash
 declare -a low_level_runtime=("crun" "runsc")
