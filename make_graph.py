@@ -179,6 +179,10 @@ def Get_Score_EPSS(CVE_name,EPSS_score_list):
             EPSS_score_list.append(float(line[1]))
     file.close()
 
+
+
+
+
 #メイン処理
 #コマンド実行時の引数を変数に格納
 benchmark = str(sys.argv[1])
@@ -316,14 +320,14 @@ elif(benchmark == "syscall_collect"):
         for k in range(len(syscall_name_list)):
             output_text += "\n\nsyscall name : " + syscall_name_list[k] + "\n["
             CVE_list = []
-            Get_Name_CVE(syscall_name_list[k]+"()",CVE_list)
+            Get_Name_CVE(" " + syscall_name_list[k]+"()",CVE_list)
             score_list = []
             #各CVEに割り当てられたEPSSスコアを得る
             #各ランタイム→複数のシステムコール→複数のCVEなので、3重ネストになるのは仕方ない
             for l in range(len(CVE_list)):
                 Get_Score_EPSS(CVE_list[l],score_list)
                 output_text += str(CVE_list[l]) + " : " + str(score_list[l]) + ", "
-            #合計スコアにシステムコールの呼び出し回数×EPSSスコアを加算する
+            #合計スコアにシステムコールの呼び出し回数 * EPSSスコアを加算する
             total_score += syscall_count_list[k] * sum(score_list)
             output_text += "]"
         output_text += "\n\n" + str(total_score) + "\n\n"
