@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#使用する低レベルランタイムを宣言
+#Declare low-level runtime
 declare -a low_level_runtime=("runc" "crun" "runsc" "kata" "kata-fc")
-#各低レベルランタイムについてコンテナを立ち上げる個数
+#Number of containers to launch for each low-level runtime
 container_num=2
-#コンテナイメージの指定
+#Specify container image
 container_image="paipoi/sysbench_"$(uname -p)" sysbench --test=memory --memory-block-size=1M --memory-total-size=100G --num-threads=1 run"
