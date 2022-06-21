@@ -20,6 +20,8 @@
 * resource_cpu
 * resource_memory
 * resource_storage
+### 低レベルランタイムのセキュリティ(開発途中)
+* gompertz_cve
 * syscall_collect
 
 # Requirement
