@@ -53,12 +53,19 @@ $ sudo apt install -y iperf
 $ sudo apt install -y sysdig
 $ echo ""$(whoami)" ALL=NOPASSWD:/usr/bin/sysdig,/usr/bin/pkill" | sudo EDITOR='tee -a' visudo
 ```
-### python3 (+pip3,numpy,matplotlib)  
+### python3 (+pip3,numpy,matplotlib,selenium)  
 ```bash
 $ sudo apt install -y python3
 $ sudo apt install -y python3-pip
 $ pip3 install numpy
 $ pip3 install matplotlib
+$ pip3 install selenium
+```
+### geckodriver
+```bash
+$ curl -OL https://github.com/mozilla/geckodriver/releases/download/v0.31.0/geckodriver-v0.31.0-linux64.tar.gz
+$ tar -zxvf geckodriver-v0.31.0-linux64.tar.gz
+$ sudo cp geckodriver /usr/local/bin/geckodriver
 ```
 ### journalctl  
 resource_storageではsystem.journalのサイズが結果に影響を及ぼしかねません。  
