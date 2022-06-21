@@ -4,7 +4,7 @@ It automatically runs benchmarks and generates graphs and logs.
 Graphs and logs are generated under the directory of the executed item.   
 
 # Features
-13 types of benchmarks are available.    
+14 types of benchmarks are available.    
 ### Performance inside the container
 * cpu  
 * memory
