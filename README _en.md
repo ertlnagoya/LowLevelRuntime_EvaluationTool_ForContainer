@@ -19,7 +19,9 @@ Graphs and logs are generated under the directory of the executed item.
 * resource_cpu
 * resource_memory
 * resource_storage
+* ### Resources used by the container on the host
 * syscall_collect
+* gompertz_cve
 
 # Requirement
 Make sure the following commands are available.  
