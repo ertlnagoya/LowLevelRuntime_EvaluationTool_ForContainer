@@ -44,9 +44,9 @@ $ sudo apt install -y sysstat
 ```bash
 $ sudo apt install -y procps
 ```
-### iperf  
+### iperf3  
 ```bash
-$ sudo apt install -y iperf
+$ sudo apt install -y iperf3
 ```
 ### sysdig  
 ```bash
