@@ -1,10 +1,11 @@
+# [日本語版はこちら](https://github.com/ertlnagoya/Container_Eval_Tool_M1) 
 # Container_Eval_Tool_M1
 It's an evaluation tool for low-level runtime of container.   
 It automatically runs benchmarks and generates graphs and logs.  
 Graphs and logs are generated under the directory of the executed item.   
 
 # Features
-13 types of benchmarks are available.    
+14 types of benchmarks are available.    
 ### Performance inside the container
 * cpu  
 * memory
@@ -19,7 +20,9 @@ Graphs and logs are generated under the directory of the executed item.
 * resource_cpu
 * resource_memory
 * resource_storage
+### Security for low-level runtime (Under development)
 * syscall_collect
+* gompertz_cve
 
 # Requirement
 Make sure the following commands are available.  
@@ -41,21 +44,28 @@ $ sudo apt install -y sysstat
 ```bash
 $ sudo apt install -y procps
 ```
-### iperf  
+### iperf3  
 ```bash
-$ sudo apt install -y iperf
+$ sudo apt install -y iperf3
 ```
 ### sysdig  
 ```bash
 $ sudo apt install -y sysdig
 $ echo ""$(whoami)" ALL=NOPASSWD:/usr/bin/sysdig,/usr/bin/pkill" | sudo EDITOR='tee -a' visudo
 ```
-### python3 (+pip3,numpy,matplotlib)  
+### python3 (+pip3,numpy,matplotlib,selenium)  
 ```bash
 $ sudo apt install -y python3
 $ sudo apt install -y python3-pip
 $ pip3 install numpy
 $ pip3 install matplotlib
+$ pip3 install selenium
+```
+### geckodriver
+```bash
+$ curl -OL https://github.com/mozilla/geckodriver/releases/download/v0.31.0/geckodriver-v0.31.0-linux64.tar.gz
+$ tar -zxvf geckodriver-v0.31.0-linux64.tar.gz
+$ sudo cp geckodriver /usr/local/bin/geckodriver
 ```
 ### journalctl  
 In resource_storage, the size of system.journal may affect the results.  
