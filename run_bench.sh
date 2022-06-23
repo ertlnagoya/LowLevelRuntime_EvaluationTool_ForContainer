@@ -92,13 +92,13 @@ for ((i = 0; i < ${#low_level_runtime[@]}; i++)) {
         }
     #Run network benchmark
     elif [ "$1" = "network" ]; then
-        #Run container as iperf host firstly
-        docker run -d --runtime=${low_level_runtime[i]} --name=${low_level_runtime[i]} --ip=172.17.0.2 paipoi/iperf_"$(uname -p)" iperf -s > /dev/null
+        #Run container as iperf3 host firstly
+        docker run -d --runtime=${low_level_runtime[i]} --name=${low_level_runtime[i]} --ip=172.17.0.2 paipoi/iperf3_"$(uname -p)" iperf3 -s > /dev/null
         wait $!
         sleep ${sleep_time}
         #Client processe on the host flows traffic
         for ((j = 0; j < ${container_num}; j++)) {
-            iperf -f M -c 172.17.0.2 >> "$1"/${low_level_runtime[i]}.txt 2>> "$1"/err_war.txt
+            iperf3 -f M -c 172.17.0.2 >> "$1"/${low_level_runtime[i]}.txt 2>> "$1"/err_war.txt
             wait $!
             sleep ${sleep_time}   
         }

@@ -118,10 +118,9 @@ def edit_data_network(runtime,file_name,bandwidth_list):
     for line in lines:
         line = line.split()
 
-        if(len(line) != 8): continue
-        
-        if(line[7] == "MBytes/sec"):
-            bandwidth_list.append(float(line[6]))
+        if(("receiver" in line) == False): continue
+        print(line[6])
+        bandwidth_list.append(float(line[6]))
 
     print("\n"+runtime)
     print(bandwidth_list)
