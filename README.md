@@ -155,7 +155,7 @@ $ source start_bench.sh syscall_collect "paipoi/sysbench_"$(uname -p)" sysbench 
 
 # Licence
 
-* このツール本体(Container_Eval_Tool_M1)はMITライセンスで公開されています。  
+* このツール本体(Container_Eval_Tool_M1)は[MITライセンス](https://github.com/ertlnagoya/Container_Eval_Tool_M1/blob/master/LICENSE)で公開されています。  
 * このツールで使用されているライブラリ・ソフト等のライセンスについては以下の通りです。
 
 | ソフトウェア・ライブラリ名 | ライセンス |
