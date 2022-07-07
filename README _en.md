@@ -156,7 +156,7 @@ $ source start_bench.sh syscall_collect "paipoi/sysbench_"$(uname -p)" sysbench 
 
 # Licence
 
-* This tool (Container_Eval_Tool_M1) is released under the MIT license.    
+* This tool (Container_Eval_Tool_M1) is released under the [MIT license](https://github.com/ertlnagoya/Container_Eval_Tool_M1/blob/master/LICENSE).    
 * Licenses for libraries, software, etc. used in this tool are as follows.  
 
 | Software・Library | License |
