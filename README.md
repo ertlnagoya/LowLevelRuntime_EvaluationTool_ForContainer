@@ -152,6 +152,26 @@ $ source start_bench.sh syscall_collect "paipoi/sysbench_"$(uname -p)" sysbench 
 * dockerfileディレクトリは使用したコンテナイメージのDockerfileをまとめています。  
 * tmpディレクトリはツールの作成時に実験的に作成したファイルをまとめています。
 
+
+# Licence
+
+* このツール本体(Container_Eval_Tool_M1)はMITライセンスで公開されています。  
+* このツールで使用されているライブラリ・ソフト等のライセンスについては以下の通りです。
+
+| ソフトウェア・ライブラリ名 | ライセンス |
+| :---: | :---: |
+| docker engine | [Apache License Version 2.0](https://docs.docker.jp/engine/faq.html#what-open-source-license-are-you-using) |
+| sysstat | [GNU General Public License v2.0](https://github.com/sysstat/sysstat/blob/master/COPYING) |
+| sysdig | [Apache License Version2.0](https://github.com/draios/sysdig/blob/dev/NOTICES) |
+| sysbench(コンテナイメージ内部で使用) | [GNU General Public License v2.0](https://github.com/akopytov/sysbench/blob/master/COPYING) |
+| unixbench(コンテナイメージ内部で使用) | [GNU General Public License v2.0](https://github.com/kdlucas/byte-unixbench/blob/master/LICENSE.txt) |
+| iper3(コンテナイメージ内部で使用) | [BSD License](https://github.com/esnet/iperf/blob/master/LICENSE) |
+| numpy | BSD License(pip-licensesにて確認) |
+| matplotlib | BSD License(pip-licensesにて確認) |
+| selenium | Apache Software License(pip-licensesにて確認) |
+| geckodriver | [Mozilla Public License](https://github.com/mozilla/geckodriver#source-code) |
+
+
 # Author
 #### 名前（Name）  
 西村 惇（Nishimura Atsushi）
