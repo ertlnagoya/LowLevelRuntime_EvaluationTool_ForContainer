@@ -153,6 +153,26 @@ $ source start_bench.sh syscall_collect "paipoi/sysbench_"$(uname -p)" sysbench 
 * The dockerfile directory is a collection of Dockerfiles for the container images used.  
 * The tmp directory is a collection of experimental files created when the tool was created.
 
+
+# Licence
+
+* This tool (Container_Eval_Tool_M1) is released under the MIT license.    
+* Licenses for libraries, software, etc. used in this tool are as follows.  
+
+| Software・Library | License |
+| :---: | :---: |
+| docker engine | [Apache License Version 2.0](https://docs.docker.jp/engine/faq.html#what-open-source-license-are-you-using) |
+| sysstat | [GNU General Public License v2.0](https://github.com/sysstat/sysstat/blob/master/COPYING) |
+| sysdig | [Apache License Version2.0](https://github.com/draios/sysdig/blob/dev/NOTICES) |
+| sysbench(Used in container image) | [GNU General Public License v2.0](https://github.com/akopytov/sysbench/blob/master/COPYING) |
+| unixbench(Used in container image) | [GNU General Public License v2.0](https://github.com/kdlucas/byte-unixbench/blob/master/LICENSE.txt) |
+| iper3(Used in container image) | [BSD License](https://github.com/esnet/iperf/blob/master/LICENSE) |
+| numpy | BSD License(Checked with pip-licenses) |
+| matplotlib | BSD License(Checked with pip-licenses) |
+| selenium | Apache Software License(Checked with pip-licenses) |
+| geckodriver | [Mozilla Public License](https://github.com/mozilla/geckodriver#source-code) |
+
+
 # Author
 #### Name  
 Nishimura Atsushi
