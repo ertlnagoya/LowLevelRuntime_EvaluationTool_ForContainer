@@ -1,5 +1,5 @@
-# [English version is here](https://github.com/ertlnagoya/Container_Eval_Tool_M1/blob/master/README%20_en.md)  
-# Container_Eval_Tool_M1
+# [English version is here](https://github.com/ertlnagoya/LowLevelRuntime_Evaluation_Tool_For-Container/blob/master/README%20_en.md)  
+# LowLevelRuntime_Evaluation_Tool_For-Container
 コンテナ作成時に使用する低レベルランタイムの評価ツールです。   
 自動でベンチマークの実行、グラフとログの生成を行います。  
 グラフとログは実行した項目のディレクトリ下に生成されます。
@@ -87,10 +87,10 @@ $ sudo systemctl restart systemd-journald.service
 ```  
 
 # Installation
-### Container_Eval_Tool_M1  
+### LowLevelRuntime_Evaluation_Tool_For-Container  
 githubからこのリポジトリをクローンして下さい。  
 ```bash
-$ git clone https://github.com/ertlnagoya/Container_Eval_Tool_M1/
+$ git clone https://github.com/ertlnagoya/LowLevelRuntime_Evaluation_Tool_For-Container/
 ```
 ### 低レベルランタイム  
 [](デフォルトで[runc](https://github.com/opencontainers/runc)、[crun](https://github.com/containers/crun)、[runsc](https://gvisor.dev/docs/user_guide/install/)を使用するように設定しています。  )
@@ -155,7 +155,7 @@ $ source start_bench.sh syscall_collect "paipoi/sysbench_"$(uname -p)" sysbench 
 
 # Licence
 
-* このツール本体(Container_Eval_Tool_M1)は[MITライセンス](https://github.com/ertlnagoya/Container_Eval_Tool_M1/blob/master/LICENSE)で公開されています。  
+* このツール本体(LowLevelRuntime_Evaluation_Tool_For-Container)は[MITライセンス](https://github.com/ertlnagoya/LowLevelRuntime_Evaluation_Tool_For-Container/blob/master/LICENSE)で公開されています。  
 * このツールで使用されているライブラリ・ソフト等のライセンスについては以下の通りです。
 
 | ソフトウェア・ライブラリ名 | ライセンス |
