@@ -21,7 +21,7 @@
 * resource_memory
 * resource_storage
 ### 低レベルランタイムのセキュリティ(開発途中)
-* gompertz_cve
+* _cve
 * syscall_collect
 
 # Requirement
