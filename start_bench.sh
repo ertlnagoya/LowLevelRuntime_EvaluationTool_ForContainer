@@ -20,7 +20,7 @@ elif [ -e "$1"/"$1".sh ]; then
     source "$1"/"$1".sh
     source run_bench.sh "$1"
   fi
-elif [ "$1" = "gompertz_cve" ]; then
+elif [ "$1" = "runtime_cve" ]; then
   rm epss_scores*
   curl -OL https://epss.cyentia.com/epss_scores-current.csv.gz
   gunzip epss_scores*
