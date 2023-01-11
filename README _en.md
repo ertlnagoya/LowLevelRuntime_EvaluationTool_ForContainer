@@ -23,6 +23,7 @@ Graphs and logs are generated under the directory of the executed item.
 ### Security for low-level runtime (Under development)
 * syscall_collect
 * runtime_cve
+* AbstractResource_AttackProgram
 
 # Requirement
 Make sure the following commands are available.  
@@ -147,6 +148,8 @@ Run start_bench.sh with specify the syscall_collect item and container image(and
 ```bash
 $ source start_bench.sh syscall_collect "paipoi/sysbench_"$(uname -p)" sysbench --test=cpu --cpu-max-prime=20000 --num-threads=1 run"
 ```
+### To execute Abstract Resource Attack (e.g. AbstractResource_AttackProgram) 
+Since a directory is provided for each Abstract Resource, inside the container, you execute the attack program in each directory.
 
 # Note
 * I have confirmed operation on x86_64 Ubuntu 18.04 and Ubuntu 20.04 and aarch64 Ubuntu 20.04 to specify runc and crun,runsc, kata.  
