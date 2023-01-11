@@ -148,7 +148,7 @@ declare -a low_level_runtime=("crun" "runsc")
 $ source start_bench.sh syscall_collect "paipoi/sysbench_"$(uname -p)" sysbench --test=cpu --cpu-max-prime=20000 --num-threads=1 run"
 ```
 ### 抽象リソース攻撃を実行する場合(例：AbstractResource_AttackProgram) 
-抽象リソース毎にディレクトリが用意されているため、各ディレクトリの中の攻撃プログラムをコンテナの中で実行する。
+抽象リソース毎にディレクトリが用意されているため、各ディレクトリの中の攻撃プログラムをコンテナの中で実行します。
 
 
 # Note
