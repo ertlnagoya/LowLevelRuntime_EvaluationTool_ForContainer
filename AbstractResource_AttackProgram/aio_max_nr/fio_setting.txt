@@ -1,0 +1,14 @@
+First,Setting!!
+
+apt update
+apt install -y vim fio
+mkdir fio
+
+
+
+
+
+
+Check Host Log!!
+
+strace -fttt -o strace_fio.log fio -rw=randwrite -bs=1k -size=50m -directory=./fio -direct=1 -numjobs=10 -name=file1 -ioengine=libaio
