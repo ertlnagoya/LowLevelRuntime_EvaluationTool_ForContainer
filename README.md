@@ -23,6 +23,7 @@
 ### 低レベルランタイムのセキュリティ(開発途中)
 * _cve
 * syscall_collect
+* AbstractResource_AttackProgram
 
 # Requirement
 以下の全てのコマンドが使用できることを確認して下さい。  
@@ -145,6 +146,9 @@ declare -a low_level_runtime=("crun" "runsc")
 引数としてsyscall_collect項目とコンテナイメージ(+コマンド)を指定し、start_bench.shを実行します。
 ```bash
 $ source start_bench.sh syscall_collect "paipoi/sysbench_"$(uname -p)" sysbench --test=cpu --cpu-max-prime=20000 --num-threads=1 run"
+```
+### 抽象リソース攻撃を実行する場合(例：AbstractResource_AttackProgram) 
+抽象リソース毎にディレクトリが用意されているため、各ディレクトリの中の攻撃プログラムをコンテナの中で実行する。
 ```
 
 # Note
